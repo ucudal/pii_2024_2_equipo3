@@ -1,1 +1,1 @@
-digimon
+puto el q lea
