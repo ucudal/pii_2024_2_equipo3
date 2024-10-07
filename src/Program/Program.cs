@@ -1,13 +1,26 @@
 ﻿using System.Text;
 using Library;
 
-PokeType Normal = new PokeType("Normal", [], [], []);
+PokeType Normal = new PokeType("Normal", ["Fighting"], [], ["Ghost"]);
 PokeType Fire = new PokeType("Fire", ["Ground","Water","Rock"], ["Grass","Fire","Ice","Bug","Steel","Fairy"],[]);
 PokeType Water = new PokeType("Water",["Grass","Electric",],["Fire","Water","Ice","Steel"],[""]);
 PokeType Grass = new PokeType("Grass", ["Fire","Ice","Poison","Flying","Bug"], ["Water","Grass","Electric","Ground"], []);
+PokeType Electric = new PokeType("Electric", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
+PokeType  = new PokeType("", [], [], []);
 
-Console.WriteLine($"{Water.Name} is weak to: {Water.Weaknesses[0]}");
-Console.WriteLine($"{Water.Name} resists {Water.Resistances[0]}-type attacks");
+
 
 Move Ember = new Move("Ember", Fire, 45, 100);
 Move Absorb = new Move("Absorb",Grass, 45, 100);
