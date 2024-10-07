@@ -13,14 +13,25 @@ public class Player
         set { name = value; }
     }
 
-    private ArrayList team;
+    private List<Pokemon> team;
 
-    public ArrayList Team
+    public List<Pokemon> Team
     {
         get { return team; }
-        set { team = value; }
+        set
+        {
+            team = value;
+        }
     }
 
+///////////Methods////////////
 
+    public void SelectFromCatalog(Pokemon pokemon)
+    {
+        if (!Team.Contains(pokemon) && Team.Count < 6)
+        {
+            Team.Add(pokemon);
+        }
+    }
     
 }
