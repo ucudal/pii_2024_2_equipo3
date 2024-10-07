@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics;
 
 namespace Library;
 
@@ -12,6 +13,14 @@ public class Pokemon
         set { name = value; }
     }
 
+    private bool isalive;
+
+    public bool IsAlive
+    {
+        get { return isalive; }
+        set { isalive = value; }
+    }
+    
     ////////////////stats///////////////////////////////////
 
     private int maxhp;
@@ -80,6 +89,7 @@ public class Pokemon
     {
         this.Moveset = [];
         this.Name = name;
+        this.IsAlive = true;
         this.MaxHp = maxhp;
         this.AttackStat = attackstat;
         this.DefenseStat = defensestat;
@@ -177,7 +187,17 @@ public class Pokemon
        {
            this.Hp = this.Hp - Damage;
        }
+
+       if (this.Hp <= 0)
+       {
+           this.Die();
+       }
     }
-        
+
+    public void Die()
+    {
+        this.IsAlive = false;
+        Console.WriteLine($"{this.Name} died!");
+    }
 
 }
