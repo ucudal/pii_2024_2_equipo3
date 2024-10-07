@@ -1,8 +1,7 @@
 using System.Collections;
-
 namespace Library;
 
-public class type
+public class PokeType
 {
     private string name;
     public string Name
@@ -36,7 +35,7 @@ public class type
     
     
     //constructor
-    public type(string name,ArrayList weaknesses, ArrayList resistances, ArrayList immunities)
+    public PokeType(string name,ArrayList weaknesses, ArrayList resistances, ArrayList immunities)
     {
         this.Name = name;
         this.Weaknesses = weaknesses;

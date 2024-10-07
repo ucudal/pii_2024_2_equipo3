@@ -49,15 +49,16 @@ public class Pokemon
   ////////////////types and moveset (moves)(attacks)////////////////////
  
   
-    private type type1;
-    public type Type1
+    private PokeType type1;
+    public PokeType Type1
     {
         get { return type1; }
-        set { type1 = value; }
+        set
+        { type1 = value; }
     }
 
-    private type type2;
-    public type Type2
+    private PokeType type2;
+    public PokeType Type2
     {
         get { return type2; }
         set { type2 = value; }
@@ -75,7 +76,7 @@ public class Pokemon
 
     //////////constructor////////////////
    
-    public Pokemon(string name, int maxhp,int attackstat,int defensestat, type type1, type type2, Move move1, Move move2, Move move3, Move move4)
+    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, Move move1, Move move2, Move move3, Move move4)
     {
         this.Moveset = [];
         this.Name = name;
@@ -83,29 +84,12 @@ public class Pokemon
         this.AttackStat = attackstat;
         this.DefenseStat = defensestat;
         this.Hp = maxhp;
-        if (type1 != null)
-        {
-            this.Type1 = type1;
-        }
+        this.Type1 = type1;
         this.Type2 = type2;
         this.Moveset.Add(move1);
         this.Moveset.Add(move2);
         this.Moveset.Add(move3);
         this.Moveset.Add(move4);
-        int specialmoves = 0;
-        foreach (Move move in this.Moveset)
-        {
-            if (move.IsSpecial)
-            {
-                specialmoves = specialmoves + 1;
-            }
-        }
-
-        if (specialmoves >= 2)
-        {
-            this.Moveset.Clear();
-        }
-        
     }
     
     //////////////////////////////////////
@@ -125,49 +109,63 @@ public class Pokemon
         Damage = (attacker.AttackStat-this.DefenseStat+7) * (100 / move.Power);
         foreach (string immunity in this.Type1.Immunities)
         {
-            if (immunity == move.Type1.Name)
+            if (immunity == move.MoveType.Name)
             {
                 Damage = Damage * 0;
             }
         }
-        foreach (string immunity in this.Type2.Immunities)
+
+        if (this.Type2 != null)
         {
-            if (immunity == move.Type1.Name)
+
+
+            foreach (string immunity in this.Type2.Immunities)
             {
-                Damage = Damage * 0;
+                if (immunity == move.MoveType.Name)
+                {
+                    Damage = Damage * 0;
+                }
             }
         }
+
         //    ^^ checks immunity for both types ^^  
         //    vv checks Resistances  vv
         foreach (string resistance in this.Type1.Resistances)
         {
-            if (resistance == move.Type1.Name)
+            if (resistance == move.MoveType.Name)
             {
                 Damage = Damage / 2;
             }
         }
-        foreach (string resistance in this.Type2.Resistances)
+
+        if (this.Type2 != null)
         {
-            if (resistance == move.Type1.Name)
+            foreach (string resistance in this.Type2.Resistances)
             {
-                Damage = Damage / 2;
+                if (resistance == move.MoveType.Name)
+                {
+                    Damage = Damage / 2;
+                }
             }
         }
-       
-        
+
         //checks effectiveness
        foreach (string weakness in this.Type1.Weaknesses)
        {
-           if (weakness == move.Type1.Name)
+           if (weakness == move.MoveType.Name)
            {
                Damage = Damage * 2;
            }
        }
-       foreach (string weakness in this.Type2.Weaknesses)
+
+       if (this.Type2 != null)
        {
-           if (weakness == move.Type1.Name)
+           foreach (string weakness in this.Type2.Weaknesses)
            {
-               Damage = Damage * 2;
+               if (weakness == move.MoveType.Name)
+               {
+                   Damage = Damage * 2;
+               }
            }
        }
 

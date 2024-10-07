@@ -1,10 +1,7 @@
-using System.Text.RegularExpressions;
-
 namespace Library;
 
-public class Move: IMove
+public class SpecialMove: IMove
 {
-
     private string name;
 
     public string Name
@@ -20,8 +17,7 @@ public class Move: IMove
         get { return moveType; }
         set { moveType = value; }
     }
-
-
+    
     private int cooldown;
 
     public int Cooldown
@@ -29,7 +25,7 @@ public class Move: IMove
         get { return cooldown; }
         set { cooldown = value; }
     }
-
+    
     private int accuracy;
     public int Accuracy
     {
@@ -45,24 +41,23 @@ public class Move: IMove
 
     }
 
+    private bool available;
 
-
-    
+    public bool Available
+    {
+        get { return available;}
+        set { available = value;}
+    }
     
     ///////constructor/////////
 
-    public Move (string name,PokeType moveType, int power, int accuracy)
+    public SpecialMove(string name, PokeType moveType, int power, int accuracy)
     {
         this.Name = name;
         this.MoveType = moveType;
         this.Power = power;
         this.Accuracy = accuracy;
+        Available = true;
         this.Cooldown = 0;
-
     }
-    
-
-
-
-
 }
