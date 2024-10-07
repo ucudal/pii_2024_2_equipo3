@@ -13,47 +13,41 @@ public class Player
         set { name = value; }
     }
 
-    private ArrayList team;
+    private List<Pokemon> team;
 
-    public ArrayList Team
+    public List<Pokemon> Team
     {
         get { return team; }
-        set { team = value; }
+        set
+        {
+            team = value;
+        }
     }
 
     public Player(string name)
     {
         this.Name = name;
     }
+///////////Methods////////////
 
-    public string SelectPokemon(string pokemonName)
+    public void SelectFromCatalog(Pokemon pokemon)
     {
-        foreach (Pokemon pokemon in team)
+        if (!Team.Contains(pokemon) && Team.Count < 6)
         {
-            if (pokemonName == pokemon.returnName())
-            {
-                return pokemonName;
-            }
+            Team.Add(pokemon);
         }
-
-        return null;
-    }
-
-    public string returnName()
-    {
-        return this.name;
     }
 
     public Pokemon getPokemonByName(string pokemonName)
     {
         foreach (Pokemon pokemon in team)
         {
-            if (pokemon.returnName() == pokemonName)
+            if (pokemon.Name == pokemonName)
             {
                 return pokemon;
             }
         }
-
         return null;
     }
+    
 }

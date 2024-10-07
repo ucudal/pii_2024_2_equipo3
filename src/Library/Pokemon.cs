@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics;
 
 namespace Library;
 
@@ -12,6 +13,14 @@ public class Pokemon
         set { name = value; }
     }
 
+    private bool isalive;
+
+    public bool IsAlive
+    {
+        get { return isalive; }
+        set { isalive = value; }
+    }
+    
     ////////////////stats///////////////////////////////////
 
     private int maxhp;
@@ -64,8 +73,8 @@ public class Pokemon
         set { type2 = value; }
     }
 
-    private List<Move> moveset;
-    public List<Move> Moveset
+    private List<IMove> moveset;
+    public List<IMove> Moveset
     {
         get { return moveset; }
         set { moveset = value; }
@@ -76,10 +85,11 @@ public class Pokemon
 
     //////////constructor////////////////
    
-    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, Move move1, Move move2, Move move3, Move move4)
+    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, IMove move1, IMove move2, IMove move3, IMove move4)
     {
         this.Moveset = [];
         this.Name = name;
+        this.IsAlive = true;
         this.MaxHp = maxhp;
         this.AttackStat = attackstat;
         this.DefenseStat = defensestat;
@@ -96,12 +106,12 @@ public class Pokemon
     
     ////////metodos//////////////////////
 
-    public void Attack(Pokemon target, Move move)
+    public void Attack(Pokemon target, IMove move)
     {
         target.ReceiveAttack(this,move);
     }
 
-    public void ReceiveAttack(Pokemon attacker, Move move)
+    public void ReceiveAttack(Pokemon attacker, IMove move)
     {
        
         int Damage;
@@ -177,12 +187,17 @@ public class Pokemon
        {
            this.Hp = this.Hp - Damage;
        }
+
+       if (this.Hp <= 0)
+       {
+           this.Die();
+       }
     }
 
-    public string returnName()
+    public void Die()
     {
-        return name;
+        this.IsAlive = false;
+        Console.WriteLine($"{this.Name} died!");
     }
-
 
 }
