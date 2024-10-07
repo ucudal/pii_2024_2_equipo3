@@ -24,6 +24,10 @@ public class Player
         }
     }
 
+    public Player(string name)
+    {
+        this.Name = name
+    }
 ///////////Methods////////////
 
     public void SelectFromCatalog(Pokemon pokemon)
