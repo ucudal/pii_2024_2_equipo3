@@ -90,7 +90,6 @@ public class Pokemon
         this.Moveset.Add(move2);
         this.Moveset.Add(move3);
         this.Moveset.Add(move4);
-        Catalog.AddPokemon(this);
     }
     
     //////////////////////////////////////

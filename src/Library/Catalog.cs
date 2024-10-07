@@ -3,26 +3,54 @@ using System.Runtime.CompilerServices;
 
 namespace Library;
 
-public static class Catalog
+public class Catalog
 {
-    private static List<Pokemon> availablePokemon = new List<Pokemon>();
+    private static Catalog instance;
 
-    public static List<Pokemon> AvailablePokemon
+    public static Catalog Instance
     {
-        get { return availablePokemon; }
-    }
-    public static void AddPokemon(Pokemon pokemon)
-    {
-        AvailablePokemon.Add(pokemon);
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Catalog();
+            }
+
+            return instance;
+        }
     }
     
-    public static void ShowList()
+    private List<Pokemon> pokemonCatalog;
+
+    public IReadOnlyList<Pokemon> PokemonCatalog
+    {
+        get { return pokemonCatalog; }
+    }
+
+    private Catalog()
+    {
+        pokemonCatalog = new List<Pokemon>();
+    }
+    public void AddPokemon(Pokemon pokemon)
+    {
+        pokemonCatalog.Add(pokemon);
+    }
+    
+    public void ShowList()
     {
         Console.WriteLine("Available Pokemon:");
-        foreach (Pokemon pokemon in AvailablePokemon)
+        foreach (Pokemon pokemon in PokemonCatalog)
         {
             Console.WriteLine($"{pokemon.Name}");
         }
     }
-    
+
+    //Agregamos el metodo AddPokemon a catalog que llama al constructor de pokemon y lo agrega al catalogo
+    public void AddPokemon(string name, int maxhp, int attackstat, int defensestat, PokeType type1, PokeType type2,
+        IMove move1, IMove move2, IMove move3, IMove move4)
+    {
+        Pokemon pokemon = new Pokemon(name, maxhp, attackstat, defensestat, type1, type2, move1, move2, move3,
+            move4);
+        this.pokemonCatalog.Add(pokemon);
+    }
 }

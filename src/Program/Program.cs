@@ -19,8 +19,7 @@ Pokemon Charmander = new Pokemon("Charmander", 100,75,52, Fire, null, Ember,Embe
 Pokemon Bulbasaur = new Pokemon("Bulbasaur", 120,55,65, Grass, null, Absorb,Absorb , Scratch, Scratch);
 Pokemon Squirtle = new Pokemon("Squirtle", 110, 60, 53, Water, null, WaterGun, WaterGun, Scratch, Scratch);
 
-Catalog.ShowList();
-
+Catalog.Instance.ShowList();
 
 Charmander.Attack(Bulbasaur,Ember);
 Bulbasaur.Attack(Squirtle,Absorb);
