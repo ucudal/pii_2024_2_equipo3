@@ -31,10 +31,7 @@ public class Catalog
     {
         pokemonCatalog = new List<Pokemon>();
     }
-    public void AddPokemon(Pokemon pokemon)
-    {
-        pokemonCatalog.Add(pokemon);
-    }
+  
     
     public void ShowList()
     {

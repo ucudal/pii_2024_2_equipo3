@@ -24,30 +24,50 @@ PokeType Fairy = new PokeType("Fairy", ["Poison","Steel"], ["Fighting","Bug","Da
 
 
 /////////////////MOVIMIENTOS/ATAQUES//////////////////////////////////////////////////////////////////////
-Move Ember = new Move("Ember", Fire, 45, 100);
-Move Absorb = new Move("Absorb",Grass, 45, 100);
-Move WaterGun = new Move("Water Gun", Water, 45, 100);
+Move Ember = new Move("Ember", Fire, 40, 100);
+Move Leafage = new Move("Absorb",Grass, 40, 100);
+Move WaterGun = new Move("Water Gun", Water, 40, 100);
 Move Scratch = new Move("Scratch", Normal, 35, 100);
 Move Spark = new Move("Spark", Electric, 40, 100);
-Move Peck = new Move("Peck", Flying, 45, 100);
+Move Gust = new Move("Gust", Flying, 45, 100);
 Move MudSlap = new Move("Mud Slap", Ground, 40, 100);
 Move IronTail = new Move("Iron Tail", Steel, 45, 100);
 Move PoisonSting = new Move("Poison Sting", Poison, 35, 100);
-
+Move BugBite = new Move("Bug Bite", Bug, 40, 100);
+Move Twister = new Move("Twister", Dragon, 45, 100);
+Move DisarmingVoice = new Move("Disarming Voice", Fairy, 40, 100);
+Move Confusion = new Move("Confusion", Psychic, 45, 100);
+Move LowSweep = new Move("Low Sweep", Fighting, 45, 100);
+Move Bite = new Move("Bite", Dark, 40, 100);
+Move IceShard = new Move("Ice Shard",Ice, 40, 100);
+Move Lick = new Move("Lick", Ghost, 40, 100);
+Move RockThrow = new Move("Rock Throw", Rock, 40, 100);
 /////////////////MOVIMIENTOS/ATAQUES//////////////////////////////////////////////////////////////////////
 
 
+
+
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
-Catalog.Instance.AddPokemon("Charizard", 100,75,52, Fire, Flying, Ember,Ember,Scratch,Scratch);
-Catalog.Instance.AddPokemon("Venusaur", 120,55,65, Grass, Poison, Absorb,Absorb , Scratch, Scratch);
-Catalog.Instance.AddPokemon("Squirtle", 110, 60, 55, Water, null, WaterGun, WaterGun, Scratch, Scratch);
+Catalog.Instance.AddPokemon("Charizard", 100,75,52, Fire, Flying, Ember,Gust,Twister,Scratch);
+Catalog.Instance.AddPokemon("Venusaur", 120,60,58, Grass, Poison, Leafage,PoisonSting , MudSlap, Scratch);
+Catalog.Instance.AddPokemon("Blastoise", 110, 63, 55, Water, null, WaterGun, IronTail, Bite, Scratch);
 Catalog.Instance.AddPokemon("Pikachu", 105, 70, 50, Electric, null, Spark, IronTail, Scratch, Scratch);
-Catalog.Instance.AddPokemon("Butterfree", 100, 65, 52, Flying, Bug,Peck,);
-Catalog.Instance.AddPokemon("Pidgeot", 105, 69, 53, Normal, Flying, Peck,Scratch,);
-Catalog.Instance.AddPokemon("Sandslash", 112, 61, 53, Ground, null,MudSlap,IronTail,Scratch,);
-Catalog.Instance.AddPokemon("Clefable", 115, 55, 63, Fairy, null,);
-Catalog.Instance.AddPokemon("Poliwrath", 107, 7, 55, Water, Fighting,);
-Catalog.Instance.AddPokemon("Alakazam", 100, 77, 50, Psychic, null,);
+Catalog.Instance.AddPokemon("Butterfree", 100, 65, 52, Flying, Bug,Gust,BugBite,PoisonSting,Scratch);
+Catalog.Instance.AddPokemon("Pidgeot", 105, 69, 53, Normal, Flying, Gust,Twister,Bite,Scratch);
+Catalog.Instance.AddPokemon("Sandslash", 112, 63, 53, Ground, null,MudSlap,IronTail,LowSweep,Scratch );
+Catalog.Instance.AddPokemon("Clefable", 115, 61, 57, Fairy, null,DisarmingVoice,Confusion,Lick,Scratch);
+Catalog.Instance.AddPokemon("Poliwrath", 107, 73, 55, Water, Fighting,WaterGun,LowSweep,MudSlap,Scratch);
+Catalog.Instance.AddPokemon("Alakazam", 100, 77, 50, Psychic, null,Confusion,DisarmingVoice,Lick,Scratch);
+Catalog.Instance.AddPokemon("Lapras",110,67,54,Water,Ice,WaterGun,IceShard,RockThrow,Scratch);
+Catalog.Instance.AddPokemon("Gengar",106,63,55,Ghost,Poison,PoisonSting,Lick,Bite,Scratch);
+Catalog.Instance.AddPokemon("Onix",120,61,59,Rock,Ground,RockThrow,MudSlap,IronTail,Scratch);
+Catalog.Instance.AddPokemon("Haxorus",110,77,55,Dragon,null,Twister,Bite,LowSweep,Scratch);
+Catalog.Instance.AddPokemon("Sableye",100,65,55,Ghost,Dark,Lick,Bite,Confusion,Scratch);
+Catalog.Instance.AddPokemon("Corviknight",115,64,57,Flying,Steel,Gust,IronTail,Ember,Scratch);
+Catalog.Instance.AddPokemon("Mawile",106,65,55,Steel,Fairy,IronTail,DisarmingVoice,Bite,Scratch);
+Catalog.Instance.AddPokemon("Breloom",105,75,53,Grass,Fighting,Leafage,LowSweep,PoisonSting,Scratch);
+Catalog.Instance.AddPokemon("Galvantula",110,68,55,Bug,Electric,BugBite,Spark,Bite,Scratch);
+Catalog.Instance.AddPokemon("Delphox",107,74,55,Fire,Psychic,Ember,Confusion,Lick,Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
