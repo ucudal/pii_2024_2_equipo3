@@ -40,14 +40,7 @@ public class SpecialMove: IMove
         set { power = value; }
 
     }
-
-    private bool available;
-
-    public bool Available
-    {
-        get { return available;}
-        set { available = value;}
-    }
+    
     
     ///////constructor/////////
 
@@ -57,7 +50,6 @@ public class SpecialMove: IMove
         this.MoveType = moveType;
         this.Power = power;
         this.Accuracy = accuracy;
-        Available = true;
         this.Cooldown = 0;
     }
 }
