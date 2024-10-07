@@ -12,7 +12,7 @@ public class Pokemon
         set { name = value; }
     }
 
-    ////////////////stats//////////////////////////////
+    ////////////////stats///////////////////////////////////
 
     private int maxhp;
     public int MaxHp
