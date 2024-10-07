@@ -64,8 +64,8 @@ public class Pokemon
         set { type2 = value; }
     }
 
-    private List<Move> moveset;
-    public List<Move> Moveset
+    private List<IMove> moveset;
+    public List<IMove> Moveset
     {
         get { return moveset; }
         set { moveset = value; }
@@ -76,7 +76,7 @@ public class Pokemon
 
     //////////constructor////////////////
    
-    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, Move move1, Move move2, Move move3, Move move4)
+    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, IMove move1, IMove move2, IMove move3, IMove move4)
     {
         this.Moveset = [];
         this.Name = name;
@@ -90,18 +90,19 @@ public class Pokemon
         this.Moveset.Add(move2);
         this.Moveset.Add(move3);
         this.Moveset.Add(move4);
+        Catalog.AddPokemon(this);
     }
     
     //////////////////////////////////////
     
     ////////metodos//////////////////////
 
-    public void Attack(Pokemon target, Move move)
+    public void Attack(Pokemon target, IMove move)
     {
         target.ReceiveAttack(this,move);
     }
 
-    public void ReceiveAttack(Pokemon attacker, Move move)
+    public void ReceiveAttack(Pokemon attacker, IMove move)
     {
        
         int Damage;
