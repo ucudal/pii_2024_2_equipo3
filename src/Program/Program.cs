@@ -42,6 +42,7 @@ Move Bite = new Move("Bite", Dark, 40, 100);
 Move IceShard = new Move("Ice Shard",Ice, 40, 100);
 Move Lick = new Move("Lick", Ghost, 40, 100);
 Move RockThrow = new Move("Rock Throw", Rock, 40, 100);
+Move Pound = new Move("Pound", Normal, 45, 100);
 /////////////////MOVIMIENTOS/ATAQUES//////////////////////////////////////////////////////////////////////
 
 
@@ -51,7 +52,7 @@ Move RockThrow = new Move("Rock Throw", Rock, 40, 100);
 Pokemon Charizard = Catalog.Instance.AddPokemon("Charizard", 100,75,52, Fire, Flying, Ember,Gust,Twister,Scratch);
 Pokemon Venusaur = Catalog.Instance.AddPokemon("Venusaur", 120,60,58, Grass, Poison, Leafage,PoisonSting , MudSlap, Scratch);
 Pokemon Blastoise = Catalog.Instance.AddPokemon("Blastoise", 110, 63, 55, Water, null, WaterGun, IronTail, Bite, Scratch);
-Pokemon Pikachu = Catalog.Instance.AddPokemon("Pikachu", 105, 70, 50, Electric, null, Spark, IronTail, Scratch, Scratch);
+Pokemon Pikachu = Catalog.Instance.AddPokemon("Pikachu", 105, 70, 50, Electric, null, Spark, IronTail, Pound, Scratch);
 Pokemon Butterfree = Catalog.Instance.AddPokemon("Butterfree", 100, 65, 52, Flying, Bug,Gust,BugBite,PoisonSting,Scratch);
 Pokemon Pidgeot = Catalog.Instance.AddPokemon("Pidgeot", 105, 69, 53, Normal, Flying, Gust,Twister,Bite,Scratch);
 Pokemon Sandslash = Catalog.Instance.AddPokemon("Sandslash", 112, 63, 53, Ground, null,MudSlap,IronTail,LowSweep,Scratch );
@@ -68,7 +69,8 @@ Pokemon Mawile = Catalog.Instance.AddPokemon("Mawile",106,65,55,Steel,Fairy,Iron
 Pokemon Breloom = Catalog.Instance.AddPokemon("Breloom",105,75,53,Grass,Fighting,Leafage,LowSweep,PoisonSting,Scratch);
 Pokemon Galvantula = Catalog.Instance.AddPokemon("Galvantula",110,68,55,Bug,Electric,BugBite,Spark,Bite,Scratch);
 Pokemon Delphox = Catalog.Instance.AddPokemon("Delphox",107,74,55,Fire,Psychic,Ember,Confusion,Lick,Scratch);
-Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, null, Scratch, Confusion, Bite, Scratch);
+Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, null, Pound, Confusion, Bite, Scratch);
+Pokemon Raikou = Catalog.Instance.AddPokemon("Raikou", 110, 76, 52, Electric, null, Spark, Bite, Confusion, Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
