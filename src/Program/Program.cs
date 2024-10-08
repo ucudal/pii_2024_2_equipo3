@@ -68,6 +68,7 @@ Pokemon Mawile = Catalog.Instance.AddPokemon("Mawile",106,65,55,Steel,Fairy,Iron
 Pokemon Breloom = Catalog.Instance.AddPokemon("Breloom",105,75,53,Grass,Fighting,Leafage,LowSweep,PoisonSting,Scratch);
 Pokemon Galvantula = Catalog.Instance.AddPokemon("Galvantula",110,68,55,Bug,Electric,BugBite,Spark,Bite,Scratch);
 Pokemon Delphox = Catalog.Instance.AddPokemon("Delphox",107,74,55,Fire,Psychic,Ember,Confusion,Lick,Scratch);
+Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, null, Scratch, Confusion, Bite, Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
