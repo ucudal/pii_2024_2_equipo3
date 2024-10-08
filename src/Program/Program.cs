@@ -71,17 +71,9 @@ Pokemon Galvantula = Catalog.Instance.AddPokemon("Galvantula",110,68,55,Bug,Elec
 Pokemon Delphox = Catalog.Instance.AddPokemon("Delphox",107,74,55,Fire,Psychic,Ember,Confusion,Lick,Scratch);
 Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, null, Pound, Confusion, Bite, Scratch);
 Pokemon Raikou = Catalog.Instance.AddPokemon("Raikou", 110, 76, 52, Electric, null, Spark, Bite, Confusion, Scratch);
+Pokemon Nidoking = Catalog.Instance.AddPokemon("Nidoking", 115, 64, 62, Poison, Ground, PoisonSting, MudSlap, BugBite, Scratch);
+Pokemon Aggron = Catalog.Instance.AddPokemon("Aggron", 120, 60, 60, Steel, Rock, IronTail, RockThrow, Pound, Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
-
 Catalog.Instance.ShowList();
-
-Charizard.Attack(Venusaur,Ember);
-Venusaur.Attack(Blastoise,Leafage);
-Blastoise.Attack(Charizard,WaterGun);
-Pikachu.Attack(Blastoise,Spark);
-
-Console.WriteLine($"Vs {Venusaur.Hp}");
-Console.WriteLine($"Bl  {Blastoise.Hp}");
-Console.WriteLine($"Ch  {Charizard.Hp}");

@@ -6,7 +6,8 @@ namespace Library;
 public class Catalog
 {
     private static Catalog instance;
-
+//hacemos el catalogo un instance, ya que planeamos que haya uno solo del cual los jugadores seleccionan los pokemon.
+//cuando un pokemon es seleccionado, se retira del catalogo para que no pueda ser seleccionado de nuevo
     public static Catalog Instance
     {
         get
@@ -38,7 +39,14 @@ public class Catalog
         Console.WriteLine("Available Pokemon:");
         foreach (Pokemon pokemon in PokemonCatalog)
         {
-            Console.WriteLine($"{pokemon.Name}");
+            if (pokemon.Type2 == null)
+            {
+                Console.WriteLine($"{pokemon.Name} | {pokemon.Type1.Name}");
+            }
+            else
+            {
+                Console.WriteLine($"{pokemon.Name} | {pokemon.Type1.Name}-{pokemon.Type2.Name}");
+            }
         }
     }
 

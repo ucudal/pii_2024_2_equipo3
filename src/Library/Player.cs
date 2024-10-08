@@ -35,6 +35,7 @@ public class Player
         if (!Team.Contains(pokemon) && Team.Count < 6)
         {
             Team.Add(pokemon);
+            //remove from catalog
         }
     }
     
