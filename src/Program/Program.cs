@@ -64,17 +64,19 @@ Pokemon Gengar = Catalog.Instance.AddPokemon("Gengar",106,63,55,Ghost,Poison,Poi
 Pokemon Onix = Catalog.Instance.AddPokemon("Onix",120,61,59,Rock,Ground,RockThrow,MudSlap,IronTail,Scratch);
 Pokemon Haxorus = Catalog.Instance.AddPokemon("Haxorus",110,77,55,Dragon,null,Twister,Bite,LowSweep,Scratch);
 Pokemon Sableye = Catalog.Instance.AddPokemon("Sableye",100,65,55,Ghost,Dark,Lick,Bite,Confusion,Scratch);
-Pokemon Corviknight = Catalog.Instance.AddPokemon("Corviknight",115,64,57,Flying,Steel,Gust,IronTail,Ember,Scratch);
+Pokemon Corviknight = Catalog.Instance.AddPokemon("Corviknight",115,64,58,Flying,Steel,Gust,IronTail,Ember,Scratch);
 Pokemon Mawile = Catalog.Instance.AddPokemon("Mawile",106,65,55,Steel,Fairy,IronTail,DisarmingVoice,Bite,Scratch);
 Pokemon Breloom = Catalog.Instance.AddPokemon("Breloom",105,75,53,Grass,Fighting,Leafage,LowSweep,PoisonSting,Scratch);
 Pokemon Galvantula = Catalog.Instance.AddPokemon("Galvantula",110,68,55,Bug,Electric,BugBite,Spark,Bite,Scratch);
 Pokemon Delphox = Catalog.Instance.AddPokemon("Delphox",107,74,55,Fire,Psychic,Ember,Confusion,Lick,Scratch);
 Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, null, Pound, Confusion, Bite, Scratch);
 Pokemon Raikou = Catalog.Instance.AddPokemon("Raikou", 110, 76, 52, Electric, null, Spark, Bite, Confusion, Scratch);
-Pokemon Nidoking = Catalog.Instance.AddPokemon("Nidoking", 115, 64, 62, Poison, Ground, PoisonSting, MudSlap, BugBite, Scratch);
+Pokemon Nidoking = Catalog.Instance.AddPokemon("Nidoking", 115, 64, 55, Poison, Ground, PoisonSting, MudSlap, BugBite, Scratch);
 Pokemon Aggron = Catalog.Instance.AddPokemon("Aggron", 120, 60, 60, Steel, Rock, IronTail, RockThrow, Pound, Scratch);
 Pokemon Druddigon = Catalog.Instance.AddPokemon("Druddigon", 113, 74, 56, Dragon, null, Twister, Gust, Bite, Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
+
+
 
 
 Catalog.Instance.ShowList();
