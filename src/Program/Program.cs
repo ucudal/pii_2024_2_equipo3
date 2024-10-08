@@ -73,6 +73,7 @@ Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, Normal, nu
 Pokemon Raikou = Catalog.Instance.AddPokemon("Raikou", 110, 76, 52, Electric, null, Spark, Bite, Confusion, Scratch);
 Pokemon Nidoking = Catalog.Instance.AddPokemon("Nidoking", 115, 64, 62, Poison, Ground, PoisonSting, MudSlap, BugBite, Scratch);
 Pokemon Aggron = Catalog.Instance.AddPokemon("Aggron", 120, 60, 60, Steel, Rock, IronTail, RockThrow, Pound, Scratch);
+Pokemon Druddigon = Catalog.Instance.AddPokemon("Druddigon", 113, 74, 56, Dragon, null, Twister, Gust, Bite, Scratch);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
