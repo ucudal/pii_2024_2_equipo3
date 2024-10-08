@@ -43,11 +43,12 @@ public class Catalog
     }
 
     //Agregamos el metodo AddPokemon a catalog que llama al constructor de pokemon y lo agrega al catalogo
-    public void AddPokemon(string name, int maxhp, int attackstat, int defensestat, PokeType type1, PokeType type2,
+    public Pokemon AddPokemon(string name, int maxhp, int attackstat, int defensestat, PokeType type1, PokeType type2,
         IMove move1, IMove move2, IMove move3, IMove move4)
     {
         Pokemon pokemon = new Pokemon(name, maxhp, attackstat, defensestat, type1, type2, move1, move2, move3,
             move4);
         this.pokemonCatalog.Add(pokemon);
+        return pokemon;
     }
 }
