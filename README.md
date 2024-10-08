@@ -1,1 +1,1 @@
-puto el q lea
+Pokemon :)
