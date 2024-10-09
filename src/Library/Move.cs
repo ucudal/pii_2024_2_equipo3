@@ -60,7 +60,22 @@ public class Move: IMove
         this.Cooldown = 0;
 
     }
+    public bool isOnCooldown()
+    {
+        return false;
+    }
+
+    public void reduceCooldownTimer()
+    {
+        
+    }
+
+    public void setCooldownTimer()
+    {
+        
+    }
     
+   
 
 
 

@@ -38,5 +38,17 @@ public class Player
             //remove from catalog
         }
     }
+
+    public Pokemon getPokemonByName(string pokemonName)
+    {
+        foreach (Pokemon pokemon in team)
+        {
+            if (pokemon.Name == pokemonName)
+            {
+                return pokemon;
+            }
+        }
+        return null;
+    }
     
 }
