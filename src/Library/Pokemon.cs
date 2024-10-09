@@ -56,8 +56,6 @@ public class Pokemon
   
  
   ////////////////types and moveset (moves)(attacks)////////////////////
- 
-  
     private PokeType type1;
     public PokeType Type1
     {
@@ -79,11 +77,9 @@ public class Pokemon
         get { return moveset; }
         set { moveset = value; }
     }
-    
+    ///////////////////////////////////////////////////
 
-    /// ///////////////////////////////////////////////
-
-    //////////constructor////////////////
+    //////////constructor/////////////////////////////
    
     public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, IMove move1, IMove move2, IMove move3, IMove move4)
     {
@@ -113,87 +109,112 @@ public class Pokemon
 
     public void ReceiveAttack(Pokemon attacker, IMove move)
     {
-       
-        int Damage;
+        foreach (IMove attackermove in attacker.Moveset)
+        {
+            if (attackermove == move)
+            {
+                int Damage;
         
-        Damage = (attacker.AttackStat-this.DefenseStat+7) * (100 / move.Power);
-        foreach (string immunity in this.Type1.Immunities)
-        {
-            if (immunity == move.MoveType.Name)
-            {
-                Damage = Damage * 0;
-            }
-        }
-
-        if (this.Type2 != null)
-        {
-
-
-            foreach (string immunity in this.Type2.Immunities)
-            {
-                if (immunity == move.MoveType.Name)
+                Damage = (attacker.AttackStat-this.DefenseStat+7) * (100 / move.Power);
+             if (Damage <= 0)
                 {
-                    Damage = Damage * 0;
+                   Damage = 5;                   //para evitar daños negativos que terminan curando al rival
                 }
-            }
-        }
-
-        //    ^^ checks immunity for both types ^^  
-        //    vv checks Resistances  vv
-        foreach (string resistance in this.Type1.Resistances)
-        {
-            if (resistance == move.MoveType.Name)
-            {
-                Damage = Damage / 2;
-            }
-        }
-
-        if (this.Type2 != null)
-        {
-            foreach (string resistance in this.Type2.Resistances)
-            {
-                if (resistance == move.MoveType.Name)
+                foreach (string immunity in this.Type1.Immunities)
                 {
-                    Damage = Damage / 2;
+                    if (immunity == move.MoveType.Name)
+                    {
+                        Damage = Damage * 0;
+                    }
                 }
-            }
-        }
 
-        //checks effectiveness
-       foreach (string weakness in this.Type1.Weaknesses)
-       {
-           if (weakness == move.MoveType.Name)
-           {
-               Damage = Damage * 2;
-           }
-       }
+                if (this.Type2 != null)
+                {
+                    foreach (string immunity in this.Type2.Immunities)
+                    {
+                        if (immunity == move.MoveType.Name)
+                        {
+                            Damage = Damage * 0;
+                        }
+                    }
+                }
 
-       if (this.Type2 != null)
-       {
-           foreach (string weakness in this.Type2.Weaknesses)
-           {
-               if (weakness == move.MoveType.Name)
+                //    ^^ checks immunity for both types ^^  
+                //    vv checks Resistances  vv
+                foreach (string resistance in this.Type1.Resistances)
+                {
+                    if (resistance == move.MoveType.Name)
+                    {
+                        Damage = Damage / 2;
+                    }
+                }
+
+                if (this.Type2 != null)
+                {
+                    foreach (string resistance in this.Type2.Resistances)
+                    {
+                        if (resistance == move.MoveType.Name)
+                        {
+                            Damage = Damage / 2;
+                        }
+                    }
+                }
+
+                //checks effectiveness
+               foreach (string weakness in this.Type1.Weaknesses)
                {
-                   Damage = Damage * 2;
+                   if (weakness == move.MoveType.Name)
+                   {
+                       Damage = Damage * 2;
+                   }
                }
-           }
-       }
 
-       Random rng = new Random();
-       int chanceToFail = (100 - move.Accuracy);
-       if (chanceToFail == 0)
-       {this.Hp = this.Hp - Damage;}
-       else if (rng.Next(1, 100) >= chanceToFail)
-       {
-           this.Hp = this.Hp - Damage;
-       }
+               if (this.Type2 != null)
+               {
+                   foreach (string weakness in this.Type2.Weaknesses)
+                   {
+                       if (weakness == move.MoveType.Name)
+                       {
+                           Damage = Damage * 2;
+                       }
+                   }
+               }
 
-       if (this.Hp <= 0)
-       {
-           this.Die();
-       }
+               Random rng = new Random();
+               if (rng.Next(1, 100) < move.Accuracy)
+               {
+                   this.Hp = this.Hp - Damage;
+               }
+               
+               
+               if (this.Hp <= 0)
+               {
+                   this.Hp = 0;
+                   this.Die();
+               }
+            }
+        }
     }
+       
+        
 
+    public void Use(StatsModifier statsModifier,Pokemon target)
+    {
+        Random rng = new Random();
+        int Rng = rng.Next(1, 100);
+        if (Rng < statsModifier.Accuracy)
+        {
+            if (statsModifier.TargetStat == "Attack")
+            {
+                target.AttackStat = (int)(target.AttackStat * statsModifier.Multiplier) ;
+            }
+            else if (statsModifier.TargetStat == "Defense")
+            {
+                target.DefenseStat = (int)(target.DefenseStat * statsModifier.Multiplier);
+            }
+        }
+    }
+     
     public void Die()
     {
         this.IsAlive = false;

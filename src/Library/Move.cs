@@ -6,7 +6,6 @@ public class Move: IMove
 {
 
     private string name;
-
     public string Name
     {
         get { return name; }
@@ -14,7 +13,6 @@ public class Move: IMove
     }
 
     private PokeType moveType;
-
     public PokeType MoveType
     {
         get { return moveType; }
@@ -23,7 +21,6 @@ public class Move: IMove
 
 
     private int cooldown;
-
     public int Cooldown
     {
         get { return cooldown; }
@@ -42,15 +39,10 @@ public class Move: IMove
     {
         get { return power; }
         set { power = value; }
-
     }
-
-
-
     
     
     ///////constructor/////////
-
     public Move (string name,PokeType moveType, int power, int accuracy)
     {
         this.Name = name;
@@ -58,7 +50,6 @@ public class Move: IMove
         this.Power = power;
         this.Accuracy = accuracy;
         this.Cooldown = 0;
-
     }
     public bool isOnCooldown()
     {
