@@ -103,7 +103,7 @@ Pokemon Snorlax = Catalog.Instance.AddPokemon("Snorlax", 120, 62, 59, 1,Normal, 
 Pokemon Raikou = Catalog.Instance.AddPokemon("Raikou", 110, 76, 55, 24,Electric, null, Spark, IceShard, Thunder, SwordsDance);
 Pokemon Nidoking = Catalog.Instance.AddPokemon("Nidoking", 115, 64, 55, 6,Poison, Ground, PoisonSting, MudSlap, GunkShot, Agility);
 Pokemon Aggron = Catalog.Instance.AddPokemon("Aggron", 120, 60, 60, 2,Steel, Rock, IronTail, RockThrow, MeteorMash, IronDefense);
-Pokemon Chandelure = Catalog.Instance.AddPokemon("Chandelure", 113, 74, 56, 16,Fire, Ghost, Ember, Lick, Poltergeist, SwordsDance);
+Pokemon Chandelure = Catalog.Instance.AddPokemon("Chandelure", 113, 74, 56, 16, Ghost, Fire,Ember, Lick, Poltergeist, SwordsDance);
 ///////////////////////POKEMONES/////////////////////////////////////////////////////////////////////////
 
 
