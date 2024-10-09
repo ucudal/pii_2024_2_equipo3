@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj": {}
+    "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\Library.csproj": {
+    "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\obj\\",
+        "projectPath": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\penaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\penaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -57,17 +57,17 @@
         }
       }
     },
-    "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj": {
+    "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj",
         "projectName": "Library.Tests",
-        "projectPath": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj",
-        "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\test\\Library.Tests\\obj\\",
+        "projectPath": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\test\\Library.Tests\\Library.Tests.csproj",
+        "packagesPath": "C:\\Users\\penaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\test\\Library.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\penaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -79,8 +79,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\Estudiante UCU\\Desktop\\UCU\\P2\\Pokemon\\src\\Library\\Library.csproj"
+              "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\penaj\\Documents\\Programacion2\\Pokemon\\src\\Library\\Library.csproj"
               }
             }
           }
