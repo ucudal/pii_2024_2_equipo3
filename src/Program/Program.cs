@@ -83,6 +83,10 @@ Pokemon Druddigon = Catalog.Instance.AddPokemon("Druddigon", 113, 74, 56, Dragon
 
 
 
+Catalog.Instance.ShowList();
+Arena Batalla = new Arena();
+Batalla.PreBattle(Catalog.Instance);
+Batalla.Turns();
 
 Console.WriteLine(Aggron.DefenseStat);
 Aggron.Use(IronDefense,Aggron);

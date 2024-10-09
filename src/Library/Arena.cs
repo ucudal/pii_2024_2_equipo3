@@ -14,7 +14,7 @@ public class Arena
     private Player Jugador2;
 
     //Configuraciones antes de iniciar los turnos
-    public void PreBattle()
+    public void PreBattle(Catalog pokemonCatalogue)
     {
         //Creacion de jugadores
         Console.WriteLine("Ingrese nombre de jugador 1");
@@ -28,7 +28,46 @@ public class Arena
         this.Jugador2 = Player2;
 
         //Seleccionar pokemones(usar catalogo)
+        for (int i = 0; i < 13; i++)
+        {
+            bool eligio = false;
+            while (!eligio)
+            {
+                Console.WriteLine($"{Jugador1.Name} eliga un pokemon del catalogo");
+                pokemonCatalogue.ShowList();
+                Console.WriteLine("Ingrese nombre del pokemon que desea elegir");
+                Pokemon seleccion = pokemonCatalogue.pickPokemon(Console.ReadLine());
+                if (seleccion == null)
+                {
+                    Console.WriteLine("Nombre incorrecto");
+                }
+                else
+                {
+                    Jugador1.SelectFromCatalog(seleccion);
+                    eligio = true;
+                }
+            }
 
+            bool eligio2 = false;
+            while (!eligio2)
+            {
+                Console.WriteLine($"{Jugador2.Name} eliga un pokemon del catalogo");
+                pokemonCatalogue.ShowList();
+                Console.WriteLine("Ingrese nombre del pokemon que desea elegir");
+                Pokemon seleccion = pokemonCatalogue.pickPokemon(Console.ReadLine());
+                if (seleccion == null)
+                {
+                    Console.WriteLine("Nombre incorrecto");
+                }
+                else
+                {
+                    Jugador2.SelectFromCatalog(seleccion);
+                    eligio2 = true;
+                }
+            }
+        }
+        
+        
         //Asignar pokemones para comenzar batalla
         Console.WriteLine($"{Player1.Name} Seleccione pokemon para iniciar la batalla");
         string pokemonName1 = Console.ReadLine();
@@ -178,9 +217,14 @@ public class Arena
                                 }
                                 chose2 = true;
                                 actuo2 = true;
+                                if (Pokemon2.Hp < 0)
+                                {
+                                    Console.WriteLine($"{Pokemon2.Name} has fainted");
+                                    //seguir aca
+                                }
                             }
                         }
-
+                        
                         if (!chose2)
                         {
                             Console.WriteLine("Movimiento incorrecto");
@@ -233,6 +277,24 @@ public class Arena
                 }
             } 
             turno = turno + 1;
+            foreach (Pokemon pokemon in Jugador1.Team)
+            {
+                if (pokemon.Hp <= 0)
+                {
+                    vivos = false;
+                    Console.WriteLine($"!Felicidades {Jugador2.Name}, has derrotado a {Jugador1.Name}");
+                }
+            }
+
+            foreach (Pokemon pokemon in Jugador2.Team)
+            {
+                if (pokemon.Hp <= 0)
+                {
+                    vivos = false;
+                    Console.WriteLine($"!Felicidades {Jugador1.Name}, has derrotado a {Jugador2.Name}");
+                }
+            }
         }
+        
     }
 }
