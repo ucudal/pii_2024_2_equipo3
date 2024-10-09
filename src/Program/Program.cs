@@ -84,9 +84,6 @@ Pokemon Druddigon = Catalog.Instance.AddPokemon("Druddigon", 113, 74, 56, Dragon
 
 
 Catalog.Instance.ShowList();
-Arena Batalla = new Arena();
-Batalla.PreBattle(Catalog.Instance);
-Batalla.Turns();
 
 Console.WriteLine(Aggron.DefenseStat);
 Aggron.Use(IronDefense,Aggron);
@@ -94,3 +91,8 @@ Console.WriteLine(Aggron.DefenseStat);
 Console.WriteLine($"HP {Aggron.Hp}");
 Charizard.Attack(Aggron,Ember);
 Console.WriteLine($"HP {Aggron.Hp}");
+
+
+Arena Batalla = new Arena();
+Batalla.PreBattle(Catalog.Instance);
+Batalla.Turns();
