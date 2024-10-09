@@ -28,12 +28,12 @@ public class Arena
         this.Jugador2 = Player2;
 
         //Seleccionar pokemones(usar catalogo)
-        for (int i = 0; i < 13; i++)
+        while (Player1.Team.Count + Player2.Team.Count <12)
         {
             bool eligio = false;
             while (!eligio)
             {
-                Console.WriteLine($"{Jugador1.Name} eliga un pokemon del catalogo");
+                Console.WriteLine($"{Jugador1.Name} Elija un pokemon del catalogo");
                 pokemonCatalogue.ShowList();
                 Console.WriteLine("Ingrese nombre del pokemon que desea elegir");
                 Pokemon seleccion = pokemonCatalogue.pickPokemon(Console.ReadLine());
@@ -51,7 +51,7 @@ public class Arena
             bool eligio2 = false;
             while (!eligio2)
             {
-                Console.WriteLine($"{Jugador2.Name} eliga un pokemon del catalogo");
+                Console.WriteLine($"{Jugador2.Name} Elija un pokemon del catalogo");
                 pokemonCatalogue.ShowList();
                 Console.WriteLine("Ingrese nombre del pokemon que desea elegir");
                 Pokemon seleccion = pokemonCatalogue.pickPokemon(Console.ReadLine());
