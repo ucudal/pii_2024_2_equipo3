@@ -59,4 +59,17 @@ public class Catalog
         this.pokemonCatalog.Add(pokemon);
         return pokemon;
     }
+
+    public Pokemon pickPokemon(string pokemonName)
+    {
+        foreach (Pokemon pokemon in PokemonCatalog)
+        {
+            if (pokemonName == pokemon.Name)
+            {
+                pokemonCatalog.Remove(pokemon);
+                return pokemon;
+            }
+        }
+        return null;
+    }
 }
