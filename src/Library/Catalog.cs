@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Library;
 
+
 public class Catalog
 {
     private static Catalog instance;
@@ -22,7 +23,6 @@ public class Catalog
     }
     
     private List<Pokemon> pokemonCatalog;
-
     public IReadOnlyList<Pokemon> PokemonCatalog
     {
         get { return pokemonCatalog; }
