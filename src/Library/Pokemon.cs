@@ -51,6 +51,12 @@ public class Pokemon
         set { attackstat = value; }
     }
 
+    private int speed;
+    public int Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
     
     ////////////////////////////////////////////////////
   
@@ -81,7 +87,7 @@ public class Pokemon
 
     //////////constructor/////////////////////////////
    
-    public Pokemon(string name, int maxhp,int attackstat,int defensestat, PokeType type1, PokeType type2, IMove move1, IMove move2, IMove move3, IMove move4)
+    public Pokemon(string name, int maxhp,int attackstat,int defensestat,int speed, PokeType type1, PokeType type2, IMove move1, IMove move2, IMove move3, IMove move4)
     {
         this.Moveset = [];
         this.Name = name;
@@ -89,6 +95,7 @@ public class Pokemon
         this.MaxHp = maxhp;
         this.AttackStat = attackstat;
         this.DefenseStat = defensestat;
+        this.Speed = speed;
         this.Hp = maxhp;
         this.Type1 = type1;
         this.Type2 = type2;
