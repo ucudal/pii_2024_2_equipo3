@@ -91,7 +91,7 @@ public class Arena
             output.printPokemonStatus(Pokemon2);
 
             //Acciones de jugador (agregar speed)
-
+            if (Pokemon1.)
             accionDelJugador(Jugador1); // Usar valor bool para evitar accion del otro jugador
             
             turno += 1;
