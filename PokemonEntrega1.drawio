@@ -1,0 +1,317 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2493" dy="1091" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-102" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="eCKMmIQ80rGUh_lMlUPy-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="Catalog" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="10" y="1730" width="550" height="150" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--1" value="+ Instance : Catalog&#xa;+ PokemonCatalog : List&lt;Pokemon&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+          <mxGeometry y="26" width="550" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--4" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+          <mxGeometry y="70" width="550" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--5" value="+ Catalog()&#xa;+ AddPokemon(name: string, maxhp: int, attackstat: int, defensestat: int, speed: int, type1: PokeType,&#xa; type2: PokeType, move1: IMove, move2: IMove, move3: IMove, move4: IMove) : Pokemon&#xa;+ PickPokemon(pokemonName: string) : Pokemon&#xa;+ ShowList() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+          <mxGeometry y="78" width="550" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-0" value="TARJETAS CRC" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="414" y="20" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-37" value="&lt;span style=&quot;&quot;&gt;Configurar la batalla entre dos jugadores y sus pokemones.&lt;/span&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Controlar los turnos y la ejecución de acciones durante la batalla.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer los pokemones en combate (Pokemon1 y Pokemon2).&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;Conocer los jugadores en batalla (Jugador1 y Jugador2).&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="90" width="340" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-38" value="Pokemon&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Player&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Catalog&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Move&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;SpecialMove&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;StatsModifier&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="90" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-39" value="Arena" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="60" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-40" value="&lt;div style=&quot;text-align: left;&quot;&gt;Gestionar la lista de pokemones disponibles.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Mostrar la lista de pokemones.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Agregar un pokemon al catálogo.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Permitir la selección de un pokemon, retirándolo del catálogo.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Conocer la lista de pokemones disponibles (&lt;code&gt;pokemonCatalog&lt;/code&gt;).&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="300" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-41" value="&lt;div&gt;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Player&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="300" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-42" value="Catalog" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="270" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-43" value="&lt;div&gt;&lt;div&gt;Definir un movimiento con nombre, tipo, poder y precisión.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Gestionar el tiempo de enfriamiento (cooldown) del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Verificar si el movimiento está en cooldown y reducirlo cuando corresponda.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Conocer el nombre del movimiento (name).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer e&lt;/span&gt;l tipo de movimiento (moveType).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer e&lt;/span&gt;l poder del movimiento (power).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer l&lt;/span&gt;a precisión del movimiento (accuracy).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer e&lt;/span&gt;l tiempo de enfriamiento del movimiento (cooldown).&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="90" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-44" value="&lt;div&gt;&lt;div&gt;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PokeType&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="888" y="90" width="90" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-45" value="Move" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="60" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-46" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Administrar el equipo de pokemones del jugador.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Seleccionar un pokemon del catálogo.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Obtener un pokemon por su nombre.&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Conocer e&lt;/b&gt;l nombre del jugador (&lt;/span&gt;&lt;code style=&quot;background-color: initial;&quot;&gt;name&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conocer el equipo de pokemones del jugador (&lt;/span&gt;&lt;code style=&quot;background-color: initial;&quot;&gt;team&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;).&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="490" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-47" value="&lt;div&gt;&amp;nbsp;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Catalog&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="490" width="90" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-48" value="Player" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="460" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-49" value="Representar un pokemon con estadísticas (vida, ataque, defensa, velocidad).&#xa;&#xa;&#xa;Gestionar tipos de pokemon y su lista de movimientos.&#xa;&#xa;&#xa;Ejecutar ataques contra otros pokemones y recibir ataques.&#xa;&#xa;&#xa;Aplicar inmunidades, resistencias y debilidades en combate.&#xa;&#xa;&#xa;Morir cuando su HP llegue a 0.&#xa;&#xa;&#xa;Conocer su nombre (name).&#xa;&#xa;&#xa;Conocer si está vivo o muerto (isalive).&#xa;&#xa;&#xa;Conocer su HP máximo y su HP actual (maxhp, hp).&#xa;&#xa;&#xa;Conocer sus estadísticas de ataque, defensa y velocidad (attackstat, defensestat, speed).&#xa;&#xa;&#xa;Conocer sus tipos (type1, type2).&#xa;&#xa;&#xa;Conocer su conjunto de movimientos (moveset)." style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="400" width="472" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-50" value="&lt;div&gt;Move&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;SpecialMove&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PokeType&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;StatsModifier&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="990" y="400" width="90" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-51" value="Pokemon" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="370" width="562" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-52" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;Responsable de almacenar información sobre los tipos de Pokémon, sus debilidades, resistencias e inmunidades.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de inicializar estos datos a través de su constructor.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de permitir el acceso a sus propiedades mediante getters y setters.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el nombre del tipo de Pokémon.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la lista de debilidades.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la lista de resistencias.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la lista de inmunidades.&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="680" width="370" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-53" value="&lt;div&gt;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Move&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="680" width="90" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-54" value="Poketype" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="650" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-55" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;Responsable de representar un ataque especial con su nombre, tipo, poder, precisión y cooldown.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de gestionar el tiempo de recarga del movimiento a través de un temporizador.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de proporcionar métodos para verificar si el movimiento está en cooldown, reducir el tiempo de cooldown y establecerlo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el nombre del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el tipo del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el poder del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la precisión del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el cooldown del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el temporizador de cooldown del movimiento.&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="940" width="370" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-56" value="&lt;div&gt;&lt;div&gt;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PokeType&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="380" y="940" width="90" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-57" value="SpecialMove" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="910" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-58" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;Responsable de modificar estadísticas específicas de un Pokémon durante una batalla.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de aplicar un multiplicador sobre una estadística objetivo cuando se usa con éxito.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Responsable de manejar los valores de cooldown, poder, precisión y tipo del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el cooldown del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el poder del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el tipo del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el nombre del movimiento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la estadística objetivo a modificar.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer el multiplicador que se aplica a la estadística objetivo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conocer la precisión del movimiento.&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="940" width="472" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-59" value="&lt;div&gt;&lt;div&gt;Pokemon&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IMove&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="990" y="940" width="90" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-60" value="StatsModifier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="518" y="910" width="562" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-62" value="Diagrama UML" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="750" y="1430" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-63" value="Player" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1220" y="1700" width="330" height="150" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-64" value="+ Name : string&#xa;+ Team : List&lt;Pokemon&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-63">
+          <mxGeometry y="26" width="330" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-65" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-63">
+          <mxGeometry y="70" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-66" value="+ Player(name: string)&#xa;+ SelectFromCatalog(pokemon: Pokemon) : void&#xa;+ GetPokemonByName(pokemonName: string) : Pokemon" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-63">
+          <mxGeometry y="78" width="330" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-67" value="Pokemon" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="24" y="1954" width="530" height="280" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-68" value="+ Name : string&#xa;+ IsAlive : bool&#xa;+ MaxHp : int&#xa;+ Hp : int&#xa;+ DefenseStat : int&#xa;+ AttackStat : int&#xa;+ Speed : int&#xa;+ Type1 : PokeType&#xa;+ Type2 : PokeType&#xa;+ Moveset : List&lt;IMove&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-67">
+          <mxGeometry y="26" width="530" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-69" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-67">
+          <mxGeometry y="180" width="530" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-70" value="+ Pokemon(name: string, maxhp: int, attackstat: int, defensestat: int, speed: int, type1: PokeType,&#xa; type2: PokeType, move1: IMove, move2: IMove, move3: IMove, move4: IMove)&#xa;+ Attack(target: Pokemon, move: IMove) : void&#xa;+ ReceiveAttack(attacker: Pokemon, move: IMove) : void&#xa;+ Use(statsModifier: StatsModifier, target: Pokemon) : void&#xa;+ Die() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-67">
+          <mxGeometry y="188" width="530" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-71" value="Move" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="670" y="2344" width="360" height="190" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-72" value="+ Name : string&#xa;+ MoveType : PokeType&#xa;+ Cooldown : int&#xa;+ Accuracy : int&#xa;+ Power : int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-71">
+          <mxGeometry y="26" width="360" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-73" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-71">
+          <mxGeometry y="110" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-74" value="+ Move (string name,PokeType moveType, int power, int accuracy)&#xa;+ IsOnCooldown() : bool&#xa;+ ReduceCooldownTimer() : void&#xa;+ SetCooldownTimer() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-71">
+          <mxGeometry y="118" width="360" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-75" value="SpecialMove" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1060" y="2338" width="510" height="190" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-76" value="+ Name : string&#xa;+ MoveType : PokeType&#xa;+ Cooldown : int&#xa;+ Accuracy : int&#xa;+ Power : int&#xa;+ CooldownTimer : int&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-75">
+          <mxGeometry y="26" width="510" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-77" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-75">
+          <mxGeometry y="120" width="510" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-78" value="+ SpecialMove(name: string, moveType: PokeType, power: int, accuracy: int, cooldown: int)&#xa;+ IsOnCooldown() : bool&#xa;+ ReduceCooldownTimer() : void&#xa;+ SetCooldownTimer() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-75">
+          <mxGeometry y="128" width="510" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-79" value="&lt;interface&gt; IMove" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="860" y="2054" width="330" height="180" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-80" value="+ Name : string&#xa;+ MoveType : PokeType&#xa;+ Cooldown : int&#xa;+ Accuracy : int&#xa;+ Power : int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-79">
+          <mxGeometry y="26" width="330" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-81" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-79">
+          <mxGeometry y="110" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-82" value="+ IsOnCooldown() : bool&#xa;+ ReduceCooldownTimer() : void&#xa;+ SetCooldownTimer() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-79">
+          <mxGeometry y="118" width="330" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-83" value="StatsModifier" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="24" y="2334" width="510" height="210" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-84" value="+ Cooldown : int&#xa;+ Power : int&#xa;+ MoveType : PokeType&#xa;+ Name : string&#xa;+ TargetStat : string&#xa;+ Multiplier : double&#xa;+ Accuracy : int" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-83">
+          <mxGeometry y="26" width="510" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-85" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-83">
+          <mxGeometry y="130" width="510" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-86" value="+ StatsModifier(name: string, targetStat: string, multiplier: double, accuracy: int)&#xa;+ IsOnCooldown() : bool&#xa;+ ReduceCooldownTimer() : void&#xa;+ SetCooldownTimer() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-83">
+          <mxGeometry y="138" width="510" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-87" value="PokeType" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="1824" width="520" height="180" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-88" value="+ Name : string&#xa;+ Weaknesses : ArrayList&#xa;+ Resistances : ArrayList&#xa;+ Immunities : ArrayList" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-87">
+          <mxGeometry y="26" width="520" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-89" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-87">
+          <mxGeometry y="110" width="520" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-90" value="+ PokeType(name: string, weaknesses: ArrayList, resistances: ArrayList, immunities: ArrayList)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-87">
+          <mxGeometry y="118" width="520" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-91" value="Arena" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="685" y="1530" width="330" height="150" as="geometry">
+            <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-92" value="+ Name : string&#xa;+ Environment : string" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-91">
+          <mxGeometry y="26" width="330" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-93" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-91">
+          <mxGeometry y="70" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-94" value="+ Arena(name: string, environment: string)&#xa;+ StartBattle(player1: Player, player2: Player) : void&#xa;+ EndBattle() : void" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="eCKMmIQ80rGUh_lMlUPy-91">
+          <mxGeometry y="78" width="330" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-99" value="" style="html=1;labelBackgroundColor=#ffffff;startArrow=none;startFill=0;startSize=6;endArrow=classic;endFill=1;endSize=6;jettySize=auto;orthogonalLoop=1;strokeWidth=1;dashed=1;fontSize=14;rounded=0;entryX=0.367;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.453;exitY=0.018;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-71" target="eCKMmIQ80rGUh_lMlUPy-82">
+          <mxGeometry width="60" height="60" relative="1" as="geometry">
+            <mxPoint x="870" y="2284" as="sourcePoint" />
+            <mxPoint x="930" y="2224" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="2280" />
+              <mxPoint x="981" y="2280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-101" value="" style="html=1;labelBackgroundColor=#ffffff;startArrow=none;startFill=0;startSize=6;endArrow=classic;endFill=1;endSize=6;jettySize=auto;orthogonalLoop=1;strokeWidth=1;dashed=1;fontSize=14;rounded=0;exitX=0.521;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.688;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-75" target="eCKMmIQ80rGUh_lMlUPy-82">
+          <mxGeometry width="60" height="60" relative="1" as="geometry">
+            <mxPoint x="1320" y="2200" as="sourcePoint" />
+            <mxPoint x="1380" y="2140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1326" y="2280" />
+              <mxPoint x="1087" y="2280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-103" value="1..*" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="280" y="1899" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-104" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.708;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-63" target="eCKMmIQ80rGUh_lMlUPy-67">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1780" />
+              <mxPoint x="600" y="1920" />
+              <mxPoint x="399" y="1920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-105" value="1..*" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="414" y="1890" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-107" value="1" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="280" y="1690" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-109" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.344;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-68" target="eCKMmIQ80rGUh_lMlUPy-90">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="2050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-110" value="1..2" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="740" y="2020" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-111" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.011;entryY=0.147;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-67" target="eCKMmIQ80rGUh_lMlUPy-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-112" value="1..*" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="800" y="2070" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-113" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.11;entryY=0.974;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="eCKMmIQ80rGUh_lMlUPy-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="2340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-114" value="1" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="640" y="2010" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-115" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.007;entryY=0.742;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-75" target="eCKMmIQ80rGUh_lMlUPy-88">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="1912" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-116" value="1" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1150" y="1880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-117" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.565;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-91" target="eCKMmIQ80rGUh_lMlUPy-63">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1406" y="1600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-118" value="2" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1410" y="1660" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-119" value="" style="html=1;labelBackgroundColor=#ffffff;startArrow=none;startFill=0;startSize=6;endArrow=classic;endFill=1;endSize=6;jettySize=auto;orthogonalLoop=1;strokeWidth=1;dashed=1;fontSize=14;rounded=0;entryX=-0.008;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="eCKMmIQ80rGUh_lMlUPy-80">
+          <mxGeometry width="60" height="60" relative="1" as="geometry">
+            <mxPoint x="360" y="2330" as="sourcePoint" />
+            <mxPoint x="500.5" y="2225" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="2310" />
+              <mxPoint x="760" y="2310" />
+              <mxPoint x="760" y="2160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCKMmIQ80rGUh_lMlUPy-120" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.518;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eCKMmIQ80rGUh_lMlUPy-92" target="zkfFHV4jXpPFQw0GAbJ--0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
