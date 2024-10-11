@@ -27,6 +27,7 @@ public class Player
     public Player(string name)
     {
         this.Name = name;
+        this.Team = new List<Pokemon>();
     }
 ///////////Methods////////////
 
