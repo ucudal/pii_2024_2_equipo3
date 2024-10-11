@@ -27,13 +27,15 @@ public class Arena
     //Configuraciones antes de iniciar los turnos
     public void PreBattle(Catalog pokemonCatalogue)
     {
+        this.Pokemon1 = null;
+        this.Pokemon2 = null;
         IOutput output = new Consola();
         //Creacion de jugadores
         creacionJugador1(output.crearNombre1());
         creacionJugador2(output.crearNombre2());
 
         //Seleccionar pokemones(usar catalogo)
-        while (Jugador1.Team.Count + Jugador2.Team.Count < 12)
+        while (Jugador1.Team.Count + Jugador2.Team.Count < 4)
         {
             bool eligio = false;
             while (!eligio)
@@ -86,14 +88,47 @@ public class Arena
 
             //Turno actual
             output.printTurn(turno);
-
             output.printPokemonStatus(Pokemon1);
             output.printPokemonStatus(Pokemon2);
 
-            //Acciones de jugador (agregar speed)
-            if (Pokemon1.)
-            accionDelJugador(Jugador1); // Usar valor bool para evitar accion del otro jugador
-            
+            //Acciones de jugador
+            if (Pokemon1.Speed > Pokemon2.Speed)
+            {
+                bool players2action = accionDelJugador(Jugador1);
+                if (!players2action)
+                {
+                    accionDelJugador(Jugador2);
+                }
+            }
+            if(Pokemon2.Speed > Pokemon1.Speed)
+            {
+                bool players1action = accionDelJugador(Jugador2);
+                if (!players1action)
+                {
+                    accionDelJugador(Jugador1);
+                }
+            }
+            else
+            {
+                Random random = new Random();
+                if (random.Next(1, 2) == 1)
+                {
+                    bool players2action = accionDelJugador(Jugador1);
+                    if (!players2action)
+                    {
+                        accionDelJugador(Jugador2);
+                    }
+                }
+                else
+                { 
+                    bool players1action = accionDelJugador(Jugador2);
+                    if (!players1action) 
+                    { 
+                        accionDelJugador(Jugador1);
+                    }
+                }
+                
+            }
             turno += 1;
             vivos = checkIfAlive(Jugador1) && checkIfAlive(Jugador2); //Retorna false si uno de los dos equipos tiene todos sus pokemon derrotados
         }
@@ -113,19 +148,19 @@ public class Arena
         }
         IOutput output = new Consola();
         bool eligio = false;
-        while (eligio)
+        while (!eligio)
         {
-            output.printSendToField(Jugador1); 
-            foreach (Pokemon pokemon in Jugador1.Team) 
+            output.printSendToField(jugador); 
+            foreach (Pokemon pokemon in jugador.Team) 
             { 
                 output.printPokemonStatus(pokemon);
             }
             string pokemonName1 = output.getPokemonName(); 
-            foreach (Pokemon pokemon in Jugador1.Team) 
+            foreach (Pokemon pokemon in jugador.Team) 
             { 
                 if (pokemonName1 == pokemon.Name) 
                 { 
-                    if (pokemon.Hp < 0) 
+                    if (pokemon.Hp <= 0) 
                     { 
                         output.printFainted(pokemon);
                     }
@@ -144,7 +179,7 @@ public class Arena
                         {
                             this.Pokemon2 = playersPokemon;
                         }
-                        output.printPlayerChosePokemon(Jugador1, pokemon);
+                        output.printPlayerChosePokemon(jugador, pokemon);
                         eligio = true;
                     }
                 }
@@ -167,33 +202,46 @@ public class Arena
         string ataque = output.chooseAttack(playersPokemon);
         foreach (IMove movimiento in playersPokemon.Moveset) 
         { 
-            if (movimiento.Name == ataque) 
-            { 
+            if (movimiento.Name == ataque)
+            {
+                Pokemon target = output.getTarget(jugador, Pokemon1, Pokemon2);
                 if (!movimiento.isOnCooldown()) 
                 { 
                     if (jugador == Jugador1) 
                     { 
-                        this.Pokemon1.Attack(Pokemon2, movimiento); 
+                        playersPokemon.Attack(target, movimiento); 
                         movimiento.setCooldownTimer();
-                        if (Pokemon2.Hp < 0) 
+                        if (!checkIfAlive(Jugador2))
+                        {
+                            return true;
+                        }
+                        if (target.Hp <= 0)
                         { 
-                            output.printhasFainted(Pokemon2); 
+                            output.printhasFainted(target);
+                            sendPokemonToField(Jugador2);
                             return true;
                         }
                     }
                     else 
                     { 
-                        this.Pokemon2.Attack(Pokemon1, movimiento); 
+                        playersPokemon.Attack(target, movimiento); 
                         movimiento.setCooldownTimer();
-                        if (Pokemon1.Hp < 0) 
+                        if (!checkIfAlive(Jugador1))
+                        {
+                            return true;
+                        }
+                        if (Pokemon1.Hp <= 0) 
                         { 
-                            output.printhasFainted(Pokemon1); 
+                            output.printhasFainted(target);
+                            sendPokemonToField(Jugador1);
                             return true;
                         }
                     }
                 }
             }
         }
+        output.printPokemonStatus(Pokemon1);
+        output.printPokemonStatus(Pokemon2);
         return false;
     }
 
@@ -203,6 +251,7 @@ public class Arena
         int accion = output.getAction(jugador);
         if (accion == 1)
         {
+            
             return attackPokemon(jugador);
         }
         if (accion == 2)
@@ -216,6 +265,8 @@ public class Arena
                 movimiento.reduceCooldownTimer();
             }
         }
+        output.printPokemonStatus(Pokemon1);
+        output.printPokemonStatus(Pokemon2);
         return false;
     }
 
@@ -231,11 +282,11 @@ public class Arena
         }
         if (jugador == Jugador1)
         {
-            output.printWonBattle(Jugador1, Jugador2);
+            output.printWonBattle(Jugador2, Jugador1);
         }
         else
         {
-            output.printWonBattle(Jugador2, Jugador1);
+            output.printWonBattle(Jugador1, Jugador2);
         }
         return false;
     }

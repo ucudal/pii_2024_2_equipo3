@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace Library;
 
 public class Consola : IOutput
@@ -56,7 +58,10 @@ public class Consola : IOutput
 
     public void printPokemonStatus(Pokemon pokemon)
     {
-        Console.WriteLine($"{pokemon.Name} {pokemon.Hp}/{pokemon.MaxHp}");
+        if (pokemon != null)
+        {
+            Console.WriteLine($"{pokemon.Name} tiene {pokemon.Hp}/{pokemon.MaxHp} puntos de vida");
+        }
     }
 
     public string getPokemonName()
@@ -126,5 +131,25 @@ public class Consola : IOutput
     public void printWonBattle(Player winner, Player loser)
     {
         Console.WriteLine($"!Felicidades {winner.Name}, has derrotado a {loser.Name}");
+    }
+
+    public Pokemon getTarget(Player jugador, Pokemon pokemon1, Pokemon pokemon2)
+    {
+        bool chose = false;
+        while (!chose)
+        {
+            Console.WriteLine($"{jugador.Name} eliga a quien atacar:");
+            Console.WriteLine($"{pokemon1.Name} or {pokemon2.Name}");
+            string pokemonName = printChoosePokemon();
+            if (pokemonName == pokemon1.Name)
+            {
+                return pokemon1;
+            }
+            else
+            {
+                return pokemon2;
+            }
+        }
+        return null;
     }
 }
