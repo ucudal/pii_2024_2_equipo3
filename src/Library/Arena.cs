@@ -22,7 +22,7 @@ public class Arena
         Player Player1 = new Player(nombre1);
         this.Jugador1 = Player1;
 
-        Console.WriteLine("Ingrese nombre de juagaor 2");
+        Console.WriteLine("Ingrese nombre de juagador 2");
         string nombre2 = Console.ReadLine();
         Player Player2 = new Player(nombre2);
         this.Jugador2 = Player2;
