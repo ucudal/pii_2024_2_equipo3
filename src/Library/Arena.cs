@@ -22,7 +22,7 @@ public class Arena
         Player Player1 = new Player(nombre1);
         this.Jugador1 = Player1;
 
-        Console.WriteLine("Ingrese nombre de juagador 2");
+        Console.WriteLine("Ingrese nombre de jugador 2");
         string nombre2 = Console.ReadLine();
         Player Player2 = new Player(nombre2);
         this.Jugador2 = Player2;
@@ -94,13 +94,13 @@ public class Arena
             bool actuo = false;
             while (!actuo)
             {
-                Console.WriteLine($"{Jugador1.Name} para atacar ingrese(A), para cambiar pokemon ingrese(C)");
+                Console.WriteLine($"{Jugador1.Name} Para atacar ingrese(A), para cambiar pokemon ingrese(C)");
                 string accion = Console.ReadLine();
                 if (accion == "A")
                 {
                     while (!chose)
                     {
-                        Console.WriteLine("Eliga un ataque");
+                        Console.WriteLine("Elija un ataque");
                         foreach (IMove movimiento in Pokemon1.Moveset)
                         {
                             Console.WriteLine($"{movimiento.Name}");
@@ -138,7 +138,7 @@ public class Arena
                 {
                     while (!chose)
                     {
-                        Console.WriteLine("Eliga un pokemon para cambiar");
+                        Console.WriteLine("Elija un pokemon para cambiar");
                         foreach (Pokemon pokemon in Jugador1.Team)
                         {
                             Console.WriteLine($"{pokemon.Name}");
@@ -185,13 +185,13 @@ public class Arena
             bool actuo2 = false;
             while (!actuo2)
             {
-                Console.WriteLine($"{Jugador2.Name} para atacar ingrese(A), para cambiar pokemon ingrese(C)");
+                Console.WriteLine($"{Jugador2.Name} Para atacar ingrese(A), para cambiar pokemon ingrese(C)");
                 string accion2 = Console.ReadLine();
                 if (accion2 == "A")
                 {
                     while (!chose2)
                     {
-                        Console.WriteLine("Eliga un ataque");
+                        Console.WriteLine("Elija un ataque");
                         foreach (IMove movimiento in Pokemon2.Moveset)
                         { 
                             Console.WriteLine($"{movimiento.Name}");
@@ -235,7 +235,7 @@ public class Arena
                 {
                     while (!chose2)
                     {
-                        Console.WriteLine("Eliga un pokemon para cambiar");
+                        Console.WriteLine("Elija un pokemon para cambiar");
                         foreach (Pokemon pokemon in Jugador2.Team)
                         {
                             Console.WriteLine($"{pokemon.Name}");
@@ -282,7 +282,7 @@ public class Arena
                 if (pokemon.Hp <= 0)
                 {
                     vivos = false;
-                    Console.WriteLine($"!Felicidades {Jugador2.Name}, has derrotado a {Jugador1.Name}");
+                    Console.WriteLine($"Felicidades! {Jugador2.Name}, has derrotado a {Jugador1.Name}");
                 }
             }
 
@@ -291,7 +291,7 @@ public class Arena
                 if (pokemon.Hp <= 0)
                 {
                     vivos = false;
-                    Console.WriteLine($"!Felicidades {Jugador1.Name}, has derrotado a {Jugador2.Name}");
+                    Console.WriteLine($"Felicidades! {Jugador1.Name}, has derrotado a {Jugador2.Name}");
                 }
             }
         }
