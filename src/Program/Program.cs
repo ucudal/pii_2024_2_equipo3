@@ -69,12 +69,12 @@ SpecialMove StoneEdge = new SpecialMove("Stone Edge(*)", Rock);
 
 
 ///////////////////////MODIFICADORES////////////////////////////////////////////////////////////////////
-StatsModifier SwordsDance = new StatsModifier("Swords Dance", "Attack", 1.25, 80);
-StatsModifier IronDefense = new StatsModifier("Iron Defense", "Defense", 1.25, 80);
-StatsModifier Growl = new StatsModifier("Growl", "Attack", 0.75, 80);
-StatsModifier Leer = new StatsModifier("Leer", "Defense", 0.75, 80);
-StatsModifier Agility = new StatsModifier("Agility", "Speed", 1.25, 80);
-StatsModifier StringShot = new StatsModifier("String Shot", "Speed", 0.75, 80);
+StatsModifier SwordsDance = new StatsModifier("Swords Dance(+)", "Attack", 1.25, 80);
+StatsModifier IronDefense = new StatsModifier("Iron Defense(+)", "Defense", 1.25, 80);
+StatsModifier Agility = new StatsModifier("Agility(+)", "Speed", 1.25, 80);
+StatsModifier Growl = new StatsModifier("Growl(-)", "Attack", 0.75, 80);
+StatsModifier Leer = new StatsModifier("Leer(-)", "Defense", 0.75, 80);    //(+) o (-) indican si el efecto es de aumento o de reduccion de estadisticas
+StatsModifier StringShot = new StatsModifier("String Shot(-)", "Speed", 0.75, 80);
 ///////////////////////MODIFICADORES////////////////////////////////////////////////////////////////////
 
 
