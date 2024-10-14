@@ -18,10 +18,7 @@ public class Player
     public List<Pokemon> Team
     {
         get { return team; }
-        set
-        {
-            team = value;
-        }
+        set { team = value; }
     }
 
     public Player(string name)
@@ -36,7 +33,6 @@ public class Player
         if (!Team.Contains(pokemon) && Team.Count < 6)
         {
             Team.Add(pokemon);
-            //remove from catalog
         }
     }
 

@@ -52,13 +52,13 @@ public class SpecialMove: IMove
     
     ///////constructor/////////
 
-    public SpecialMove(string name, PokeType moveType, int power, int accuracy, int Cooldown)
+    public SpecialMove(string name, PokeType moveType)
     {
         this.Name = name;
         this.MoveType = moveType;
-        this.Power = power;
-        this.Accuracy = accuracy;
-        this.Cooldown = Cooldown;
+        this.Power = 80;
+        this.Accuracy = 75;
+        this.Cooldown = 1;
         this.CooldownTimer = 0;
     }
 

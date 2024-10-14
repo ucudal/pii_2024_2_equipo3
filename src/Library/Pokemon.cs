@@ -226,6 +226,10 @@ public class Pokemon
             {
                 target.DefenseStat = (int)(target.DefenseStat * statsModifier.Multiplier);
             }
+            else if (statsModifier.TargetStat == "Speed")
+            {
+                target.Speed = (int)(target.Speed * statsModifier.Multiplier);
+            }
         }
     }
      
