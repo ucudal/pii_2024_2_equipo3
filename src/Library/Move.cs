@@ -40,16 +40,34 @@ public class Move: IMove
         get { return power; }
         set { power = value; }
     }
+
+    private Status applicableStatus;
+
+    public Status ApplicableStatus
+    {
+        get { return applicableStatus; }
+        set { applicableStatus = value; }
+    }
+
+    private double statusChance;
+
+    public double StatusChance
+    {
+        get { return statusChance; }
+        set { statusChance = value; }
+    }
     
     
     ///////constructor/////////
-    public Move (string name,PokeType moveType, int power, int accuracy)
+    public Move (string name,PokeType moveType, int power, int accuracy, Status status,double statusChance)
     {
         this.Name = name;
         this.MoveType = moveType;
         this.Power = power;
         this.Accuracy = accuracy;
         this.Cooldown = 0;
+        this.ApplicableStatus = status;
+        this.StatusChance = statusChance;
     }
     public bool isOnCooldown()
     {
