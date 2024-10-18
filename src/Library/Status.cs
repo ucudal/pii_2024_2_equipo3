@@ -10,6 +10,13 @@ public class Status
         set { name = value; }
     }
 
+    private int chanceToApply;
+
+    public int ChanceToApply
+    {
+        get { return chanceToApply; }
+        set { chanceToApply = value; }
+    }
     public Status(string name)
     {
         this.Name = name;

@@ -1,4 +1,5 @@
 namespace Library;
+
 public interface IMove
 {
     public int Cooldown { set; get; }
@@ -6,7 +7,10 @@ public interface IMove
     public PokeType MoveType { set; get; }
     public int Accuracy { set; get; }
     public int Power { set; get; }
-    public bool isOnCooldown();
+    public Status Status { set; get; }
+    
+
+public bool isOnCooldown();
     public void setCooldownTimer();
     public void reduceCooldownTimer();
 }

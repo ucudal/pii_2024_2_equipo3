@@ -22,8 +22,16 @@ public class Pokemon
         get { return isalive; }
         set { isalive = value; }
     }
-    
-    ////////////////stats///////////////////////////////////
+
+    private Status status;
+
+    public Status Status
+    {
+        get { return status; }
+        set { status = value; }
+    }
+
+////////////////stats///////////////////////////////////
 
     private int maxhp;
     public int MaxHp
@@ -105,6 +113,7 @@ public class Pokemon
         this.Moveset.Add(move2);
         this.Moveset.Add(move3);
         this.Moveset.Add(move4);
+        this.Status = null;
     }
     
     //////////////////////////////////////
@@ -197,9 +206,14 @@ public class Pokemon
                }
 
                Random rng = new Random();
+               Random rngstatus = new Random();
                if (rng.Next(1, 100) < move.Accuracy)
                {
                    this.Hp = this.Hp - Damage;
+                   if (rngstatus.Next(1, 100) < move.Status.ChanceToApply)
+                   {
+                       this.Status = move.Status;
+                   }
                }
                
                
