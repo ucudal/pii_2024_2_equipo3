@@ -7,7 +7,7 @@ public interface IMove
     public PokeType MoveType { set; get; }
     public int Accuracy { set; get; }
     public int Power { set; get; }
-    public Status Status { set; get; }
+  
     
 
 public bool isOnCooldown();

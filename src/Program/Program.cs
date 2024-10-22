@@ -46,25 +46,16 @@ Move Pound = new Move("Pound", Normal, 45, 100);
 /////////////////MOVIMIENTOS/ATAQUES//////////////////////////////////////////////////////////////////////
 
 
+/////////////////////STATUS///////////////////////////////////////////////////////////////////////////////
+PoisonStatus sPoison = new PoisonStatus("Poison");
+
+
+
+/////////////////////STATUS///////////////////////////////////////////////////////////////////////////////
+
+
 /////////////////ATAQUES ESPECIALES///////////////////////////////////////////////////////////////////////
-SpecialMove HyperBeam = new SpecialMove("Hyper Beam(*)", Normal);
-SpecialMove SolarBeam = new SpecialMove("Solar Beam(*)", Grass);
-SpecialMove Flamethrower = new SpecialMove("Flamethrower(*)", Fire);        //el (*) indica que es especial
-SpecialMove HydroPump = new SpecialMove("Hydro Pump(*)", Water);
-SpecialMove Thunder = new SpecialMove("Thunder(*)", Electric);
-SpecialMove BraveBird = new SpecialMove("Brave Bird(*)", Flying);
-SpecialMove Earthquake = new SpecialMove("Earthquake(*)", Ground);
-SpecialMove MeteorMash = new SpecialMove("Meteor Mash(*)", Steel);
-SpecialMove GunkShot = new SpecialMove("Gunk Shot(*)", Poison);
-SpecialMove BugBuzz = new SpecialMove("Bug Buzz(*)", Bug);
-SpecialMove DracoMeteor = new SpecialMove("Draco Meteor(*)", Dragon);
-SpecialMove DazzlingGleam = new SpecialMove("Dazzling Gleam(*)", Fairy);
-SpecialMove Psystrike = new SpecialMove("Psystrike(*)", Psychic);
-SpecialMove FocusBlast = new SpecialMove("Focus Blast(*)", Fighting);
-SpecialMove Crunch = new SpecialMove("Crunch(*)", Dark);
-SpecialMove IceBeam = new SpecialMove("Ice Beam(*)", Ice);
-SpecialMove Poltergeist = new SpecialMove("Poltergeist(*)", Ghost);
-SpecialMove StoneEdge = new SpecialMove("Stone Edge(*)", Rock);
+
 /////////////////ATAQUES ESPECIALES///////////////////////////////////////////////////////////////////////
 
 

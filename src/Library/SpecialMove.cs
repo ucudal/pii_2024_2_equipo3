@@ -52,11 +52,11 @@ public class SpecialMove: IMove
     
     ///////constructor/////////
 
-    public SpecialMove(string name, PokeType moveType)
+    public SpecialMove(string name, IStatus status)
     {
         this.Name = name;
-        this.MoveType = moveType;
-        this.Power = 80;
+        this.MoveType = null;
+        this.Power = 0;
         this.Accuracy = 75;
         this.Cooldown = 1;
         this.CooldownTimer = 0;

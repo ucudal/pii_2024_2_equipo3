@@ -23,9 +23,9 @@ public class Pokemon
         set { isalive = value; }
     }
 
-    private Status status;
+    private IStatus status;
 
-    public Status Status
+    public IStatus Status
     {
         get { return status; }
         set { status = value; }
@@ -210,10 +210,6 @@ public class Pokemon
                if (rng.Next(1, 100) < move.Accuracy)
                {
                    this.Hp = this.Hp - Damage;
-                   if (rngstatus.Next(1, 100) < move.Status.ChanceToApply)
-                   {
-                       this.Status = move.Status;
-                   }
                }
                
                
