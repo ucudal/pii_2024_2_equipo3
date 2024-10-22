@@ -131,6 +131,7 @@ public class Arena
                 }
                 
             }
+            //aca habria que revisar si los pokemones tienen veneno o quemadura y aplicarla (el daño) al terminar el turno 
             turno += 1;
             vivos = checkIfAlive(Jugador1) && checkIfAlive(Jugador2); //Retorna false si uno de los dos equipos tiene todos sus pokemon derrotados
         }
