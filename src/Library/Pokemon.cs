@@ -8,7 +8,6 @@ namespace Library;
 public class Pokemon
 {
     private string name;
-
     public string Name
     {
         get { return name; }
@@ -16,7 +15,6 @@ public class Pokemon
     }
 
     private bool isalive;
-
     public bool IsAlive
     {
         get { return isalive; }
@@ -24,7 +22,6 @@ public class Pokemon
     }
 
     private IStatus status;
-
     public IStatus Status
     {
         get { return status; }
@@ -67,7 +64,6 @@ public class Pokemon
         get { return speed; }
         set { speed = value; }
     }
-    
     ////////////////////////////////////////////////////
   
  
@@ -124,7 +120,11 @@ public class Pokemon
     {
         if (move is StatsModifier statsModifier)
         {
-            target.Use(statsModifier,this);
+            this.Use(statsModifier,target);
+        }
+        else if (move is SpecialMove specialMove)
+        {
+            this.UseSpecial(specialMove, target);
         }
         else
         {
@@ -132,6 +132,16 @@ public class Pokemon
         }
     }
 
+    public void UseSpecial(SpecialMove move, Pokemon target)
+    {
+        Random rng = new Random();
+        if (rng.Next(1, 100) < move.Accuracy)
+        {
+            target.Status = move.Status;
+        }
+    }
+    
+    
     public void ReceiveAttack(Pokemon attacker, IMove move)
     {
         foreach (IMove attackermove in attacker.Moveset)

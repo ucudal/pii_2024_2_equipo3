@@ -48,6 +48,12 @@ public class SpecialMove: IMove
         set { power = value; }
 
     }
+
+    public IStatus Status
+    {
+        get;
+        set;
+    }
     
     
     ///////constructor/////////
@@ -60,6 +66,7 @@ public class SpecialMove: IMove
         this.Accuracy = 75;
         this.Cooldown = 1;
         this.CooldownTimer = 0;
+        this.Status = status;
     }
 
     public bool isOnCooldown()

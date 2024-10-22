@@ -12,14 +12,10 @@ public class PoisonStatus: IStatus
     
     private void Apply(Pokemon target)
     {
-        target.Hp = (int)(target.Hp - (target.Hp * 0.1));
+        target.Hp = (int)(target.Hp - (target.Hp * 0.05));
     }
 
-    private void Remove(Pokemon target)
-    {
-        target.Status = null;
-    }
-
+   
     public PoisonStatus(string name)
     {
         this.Name = name;
