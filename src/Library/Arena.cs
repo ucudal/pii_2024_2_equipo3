@@ -213,12 +213,11 @@ public class Arena
             if (movimiento.Name == ataque)
             {
                 Pokemon target = output.getTarget(jugador, Pokemon1, Pokemon2);
-                if (!movimiento.isOnCooldown()) 
+                if (movimiento.Cooldown==0) 
                 { 
                     if (jugador == Jugador1) 
                     { 
                         playersPokemon.Attack(target, movimiento); 
-                        movimiento.setCooldownTimer();
                         if (!checkIfAlive(Jugador2))
                         {
                             return true;
@@ -233,7 +232,6 @@ public class Arena
                     else 
                     { 
                         playersPokemon.Attack(target, movimiento); 
-                        movimiento.setCooldownTimer();
                         if (!checkIfAlive(Jugador1))
                         {
                             return true;
@@ -268,9 +266,13 @@ public class Arena
         }
         foreach (Pokemon pokemon in jugador.Team) 
         { 
-            foreach (IMove movimiento in pokemon.Moveset) 
-            { 
-                movimiento.reduceCooldownTimer();
+            foreach (IMove movimiento in pokemon.Moveset)            //reduce todos los cooldowns en 1
+            {
+                movimiento.Cooldown = movimiento.Cooldown - 1;
+                if (movimiento.Cooldown <= 0)
+                {
+                    movimiento.Cooldown = 0;
+                }
             }
         }
         output.printPokemonStatus(Pokemon1);
