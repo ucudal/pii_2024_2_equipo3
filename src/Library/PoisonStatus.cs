@@ -1,24 +1,17 @@
 namespace Library;
 
-public class PoisonStatus: IStatus
+public class PoisonStatus: Status
 {
-
-    private string name;
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
     
-    private void Apply(Pokemon target)
+    public override void Apply(Pokemon target)
     {
         target.Hp = (int)(target.Hp - (target.Hp * 0.05));
     }
 
    
-    public PoisonStatus(string name)
+    public PoisonStatus()
     {
-        this.Name = name;
+        this.EndOfTurn = true;
     }
     
     

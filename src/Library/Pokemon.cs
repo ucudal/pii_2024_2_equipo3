@@ -21,8 +21,8 @@ public class Pokemon
         set { isalive = value; }
     }
 
-    private IStatus status;
-    public IStatus Status
+    private Status status;
+    public Status Status
     {
         get { return status; }
         set { status = value; }
@@ -215,14 +215,23 @@ public class Pokemon
                    }
                }
 
-               Random rng = new Random();
-               Random rngstatus = new Random();
-               if (rng.Next(1, 100) < move.Accuracy)
+               Random rngParalysis = new Random();
+               if (!(this.Status is ParalyzeStatus))
                {
-                   this.Hp = this.Hp - Damage;
+                   Random rng = new Random();
+                   if (rng.Next(1, 100) < move.Accuracy)
+                   {
+                       this.Hp = this.Hp - Damage;
+                   }
                }
-               
-               
+               if (this.Status is ParalyzeStatus && rngParalysis.Next(1,3) != 1)
+               {
+                   Random rng = new Random();
+                   if (rng.Next(1, 100) < move.Accuracy)
+                   {
+                       this.Hp = this.Hp - Damage;
+                   }
+               }
                if (this.Hp <= 0)
                {
                    this.Hp = 0;
@@ -231,7 +240,11 @@ public class Pokemon
             }
         }
     }
-       
+
+    public void ReceiveStatus(Status status)
+    {
+        status.Apply(this);
+    }
         
 
     public void Use(StatsModifier statsModifier,Pokemon target)

@@ -1,22 +1,14 @@
 namespace Library;
 
-public class BurnStatus:IStatus
+public class BurnStatus: Status
 {
-    private string name;
-
-    public string Name
+    public override void Apply(Pokemon target)
     {
-        get { return name; }
-        set { name = value; }
+        target.Hp = (int)(target.Hp - (target.MaxHp * 0.1));
     }
 
-    public void Apply(Pokemon target)
+    public BurnStatus()
     {
-        target.Hp = (int)(target.Hp - (target.Hp * 0.1));
-    }
-
-    public BurnStatus(string name)
-    {
-        this.Name = name;
+        this.EndOfTurn = true;
     }
 }

@@ -1,16 +1,11 @@
 namespace Library;
 
-public class SleepStatus:IStatus
+public class SleepStatus: Status
 {
-    private string name;
-    public string Name
+
+    public override void Apply(Pokemon target)
     {
-        get { return name; }
-        set { name = value; }
-    }
-    
-    public void Apply(Pokemon target)
-    {
+        
         Random rng = new Random();
         int TurnsAsleep = rng.Next(1, 4);
         foreach (IMove move in target.Moveset)
@@ -19,8 +14,8 @@ public class SleepStatus:IStatus
         }
     }
 
-    public SleepStatus(string name)
+    public SleepStatus()
     {
-        this.Name = name;
+        this.EndOfTurn = false;
     }
 }
