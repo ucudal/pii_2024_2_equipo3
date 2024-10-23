@@ -7,10 +7,4 @@ public interface IMove
     public PokeType MoveType { set; get; }
     public int Accuracy { set; get; }
     public int Power { set; get; }
-  
-    
-
-public bool isOnCooldown();
-    public void setCooldownTimer();
-    public void reduceCooldownTimer();
 }

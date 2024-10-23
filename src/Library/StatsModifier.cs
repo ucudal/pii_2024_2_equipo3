@@ -56,19 +56,6 @@ public class StatsModifier:IMove
         this.TargetStat = targetStat;
         this.Multiplier = multiplier;
         this.Accuracy = accuracy;
-    }
-    public bool isOnCooldown()
-    {
-        return false;
-    }
-
-    public void reduceCooldownTimer()
-    {
-        
-    }
-
-    public void setCooldownTimer()
-    {
-        
+        this.Cooldown = 0;
     }
 }

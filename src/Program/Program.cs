@@ -47,10 +47,10 @@ Move Pound = new Move("Pound", Normal, 45, 100);
 
 
 /////////////////////STATUS///////////////////////////////////////////////////////////////////////////////
-PoisonStatus sPoison = new PoisonStatus("Poison");
-BurnStatus sBurn = new BurnStatus("Burn");
-SleepStatus sSleep = new SleepStatus("Sleep");
-ParalyzeStatus sParalyze = new ParalyzeStatus("Paralyze");
+PoisonStatus sPoison = new PoisonStatus();
+BurnStatus sBurn = new BurnStatus();
+SleepStatus sSleep = new SleepStatus();
+ParalyzeStatus sParalyze = new ParalyzeStatus();
 /////////////////////STATUS///////////////////////////////////////////////////////////////////////////////
 
 

@@ -50,19 +50,4 @@ public class Move: IMove
         this.Accuracy = accuracy;
         this.Cooldown = 0;
     }
-    
-    public bool isOnCooldown()
-    {
-        return false;
-    }
-
-    public void reduceCooldownTimer()
-    {
-        
-    }
-
-    public void setCooldownTimer()
-    {
-        
-    }
 }

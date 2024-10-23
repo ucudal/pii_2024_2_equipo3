@@ -11,7 +11,6 @@ public class SpecialMove: IMove
     }
 
     private PokeType moveType;
-
     public PokeType MoveType
     {
         get { return moveType; }
@@ -19,7 +18,6 @@ public class SpecialMove: IMove
     }
     
     private int cooldown;
-
     public int Cooldown
     {
         get { return cooldown; }
@@ -61,34 +59,11 @@ public class SpecialMove: IMove
     public SpecialMove(string name, Status status)
     {
         this.Name = name;
-        this.MoveType = null;
-        this.Power = 0;
         this.Accuracy = 75;
-        this.Cooldown = 1;
-        this.CooldownTimer = 0;
+        this.Cooldown = 0;
         this.Status = status;
     }
 
-    public bool isOnCooldown()
-    {
-        if (CooldownTimer == 0)
-        {
-            return false;
-        }
-        else return true;
-    }
-
-    public void reduceCooldownTimer()
-    {
-        if (this.CooldownTimer > 0)
-        {
-            this.CooldownTimer = this.CooldownTimer - 1;
-        }
-    }
-
-    public void setCooldownTimer()
-    {
-        this.CooldownTimer = this.Cooldown;
-    }
+ 
     
 }

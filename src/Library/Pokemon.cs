@@ -138,6 +138,7 @@ public class Pokemon
         if (rng.Next(1, 100) < move.Accuracy)
         {
             target.Status = move.Status;
+            move.Cooldown = 2;
         }
     }
     
