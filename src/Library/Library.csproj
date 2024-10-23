@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="BurnStatus.cs" />
+    <Compile Remove="ParalyzeStatus.cs" />
+    <Compile Remove="SleepStatus.cs" />
+    <Compile Remove="PoisonStatus.cs" />
+  </ItemGroup>
+
 </Project>

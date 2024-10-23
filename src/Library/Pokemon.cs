@@ -21,8 +21,8 @@ public class Pokemon
         set { isalive = value; }
     }
 
-    private IStatus status;
-    public IStatus Status
+    private Status status;
+    public Status Status
     {
         get { return status; }
         set { status = value; }
@@ -142,6 +142,7 @@ public class Pokemon
     }
     
     
+    
     public void ReceiveAttack(Pokemon attacker, IMove move)
     {
         foreach (IMove attackermove in attacker.Moveset)
@@ -162,7 +163,6 @@ public class Pokemon
                         Damage = Damage * 0;
                     }
                 }
-
                 if (this.Type2 != null)
                 {
                     foreach (string immunity in this.Type2.Immunities)
@@ -173,7 +173,6 @@ public class Pokemon
                         }
                     }
                 }
-
                 //    ^^ checks immunity for both types ^^  
                 //    vv checks Resistances  vv
                 foreach (string resistance in this.Type1.Resistances)
@@ -183,7 +182,6 @@ public class Pokemon
                         Damage = Damage / 2;
                     }
                 }
-
                 if (this.Type2 != null)
                 {
                     foreach (string resistance in this.Type2.Resistances)
@@ -194,7 +192,6 @@ public class Pokemon
                         }
                     }
                 }
-
                 //checks effectiveness
                foreach (string weakness in this.Type1.Weaknesses)
                {
@@ -203,7 +200,6 @@ public class Pokemon
                        Damage = Damage * 2;
                    }
                }
-
                if (this.Type2 != null)
                {
                    foreach (string weakness in this.Type2.Weaknesses)
@@ -214,19 +210,24 @@ public class Pokemon
                        }
                    }
                }
-
-               Random rng = new Random();
-               Random rngstatus = new Random();
-               if (rng.Next(1, 100) < move.Accuracy)
+               Random ParalysisRng = new Random();
+               if (ParalysisRng.Next(1, 3) == 1)
                {
-                   this.Hp = this.Hp - Damage;
+                   Console.WriteLine($"{this.Name} is paralyzed and can´t move!");
                }
-               
-               
-               if (this.Hp <= 0)
+               else
                {
-                   this.Hp = 0;
-                   this.Die();
+                   Random rng = new Random();
+                   Random rngstatus = new Random();
+                   if (rng.Next(1, 100) < move.Accuracy)
+                   {
+                       this.Hp = this.Hp - Damage;
+                   }
+                   if (this.Hp <= 0)
+                   {
+                       this.Hp = 0;
+                       this.Die();
+                   }
                }
             }
         }
@@ -254,6 +255,12 @@ public class Pokemon
             }
         }
     }
+
+    public void ClearStatus(Pokemon target)
+    {
+        target.Status = null;
+    }
+    
      
     public void Die()
     {

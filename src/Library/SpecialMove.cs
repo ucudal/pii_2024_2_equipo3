@@ -49,7 +49,7 @@ public class SpecialMove: IMove
 
     }
 
-    public IStatus Status
+    public Status Status
     {
         get;
         set;
@@ -58,11 +58,9 @@ public class SpecialMove: IMove
     
     ///////constructor/////////
 
-    public SpecialMove(string name, IStatus status)
+    public SpecialMove(string name, Status status)
     {
         this.Name = name;
-        this.MoveType = null;
-        this.Power = 0;
         this.Accuracy = 75;
         this.Cooldown = 1;
         this.CooldownTimer = 0;

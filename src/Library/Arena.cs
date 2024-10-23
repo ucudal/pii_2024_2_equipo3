@@ -131,7 +131,27 @@ public class Arena
                 }
                 
             }
-            //aca habria que revisar si los pokemones tienen veneno o quemadura y aplicarla (el daño) al terminar el turno 
+            if (Pokemon1.Status.Name == "Poison")                               //chequea al final del turno si los pokemon tienen
+            {                                                                  //veneno o quemadura y aplica el daño
+                Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.05);
+                Console.WriteLine($"{Pokemon1.Name} took poison damage!");
+            }
+            else if (Pokemon1.Status.Name == "Burn")
+            {
+                Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.1);
+                Console.WriteLine($"{Pokemon1.Name} took burn damage!");
+            }
+            if (Pokemon2.Status.Name == "Poison")                               
+            {                                                                  
+                Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.05);
+                Console.WriteLine($"{Pokemon2.Name} took poison damage!");
+            }
+            else if (Pokemon2.Status.Name == "Burn")
+            {
+                Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.1);
+                Console.WriteLine($"{Pokemon2.Name} took burn damage!");
+            }
+            
             turno += 1;
             vivos = checkIfAlive(Jugador1) && checkIfAlive(Jugador2); //Retorna false si uno de los dos equipos tiene todos sus pokemon derrotados
         }
