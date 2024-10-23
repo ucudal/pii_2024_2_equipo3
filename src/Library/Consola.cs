@@ -153,4 +153,14 @@ public class Consola : IOutput
         }
         return null;
     }
+
+    public void printPoison(Pokemon pokemon)
+    {
+        Console.WriteLine($"{pokemon.Name} took poison damage!");
+    }
+
+    public void printBurn(Pokemon pokemon)
+    {
+        Console.WriteLine($"{pokemon.Name} took burn damage!");
+    }
 }

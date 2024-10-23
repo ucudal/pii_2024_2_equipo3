@@ -20,4 +20,7 @@ public interface IOutput
     public string chooseAttack(Pokemon pokemon);
     public void printWonBattle(Player winner, Player loser);
     public Pokemon getTarget(Player jugador, Pokemon pokemon1 , Pokemon pokemon2);
+    public void printPoison(Pokemon pokemon);
+    public void printBurn(Pokemon pokemon);
+    
 }

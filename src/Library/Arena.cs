@@ -92,66 +92,134 @@ public class Arena
             output.printTurn(turno);
             output.printPokemonStatus(Pokemon1);
             output.printPokemonStatus(Pokemon2);
-
+            
             //Acciones de jugador
-            if (Pokemon1.Speed > Pokemon2.Speed)
+            int player1action = output.getAction(Jugador1);
+            int player2action = output.getAction(Jugador2);
+            if (player1action == 2 | player2action == 2)
             {
-                bool players2action = accionDelJugador(Jugador1);
-                if (!players2action)
+                if (player1action == 2 & player2action == 2)
                 {
-                    accionDelJugador(Jugador2);
-                }
-            }
-            if(Pokemon2.Speed > Pokemon1.Speed)
-            {
-                bool players1action = accionDelJugador(Jugador2);
-                if (!players1action)
-                {
-                    accionDelJugador(Jugador1);
-                }
-            }
-            else
-            {
-                Random random = new Random();
-                if (random.Next(1, 2) == 1)
-                {
-                    bool players2action = accionDelJugador(Jugador1);
-                    if (!players2action)
+                    if (Pokemon1.Speed > Pokemon2.Speed)
                     {
-                        accionDelJugador(Jugador2);
+                        sendPokemonToField(Jugador1);
                     }
+
+                    if (Pokemon2.Speed > Pokemon1.Speed)
+                    {
+                        sendPokemonToField(Jugador2);
+                    }
+                    else
+                    {
+                        Random random = new Random();
+                        if (random.Next(1, 2) == 1)
+                        {
+                            sendPokemonToField(Jugador1);
+                            sendPokemonToField(Jugador2);
+                        }
+                        else
+                        {
+                            sendPokemonToField(Jugador2);
+                            sendPokemonToField(Jugador1);
+                        }
+                    }
+                }
+
+                if (player1action == 2)
+                {
+                    sendPokemonToField(Jugador1);
                 }
                 else
-                { 
-                    bool players1action = accionDelJugador(Jugador2);
-                    if (!players1action) 
-                    { 
-                        accionDelJugador(Jugador1);
+                {
+                    sendPokemonToField(Jugador2);
+                }
+            }
+            if (player1action == 3 | player2action == 3)
+            {
+                if (player1action == 3 & player2action == 3)
+                {
+                    if (Pokemon1.Speed > Pokemon2.Speed)
+                    {
+                        //Agregar metodos de items
+                    }
+                    if (Pokemon2.Speed > Pokemon1.Speed)
+                    {
+                        //Agregar metodos de items
+                    }
+                    else
+                    {
+                        Random random = new Random();
+                        if (random.Next(1, 2) == 1)
+                        {
+                            //Agregar metodos de items
+                        }
+                        else
+                        {
+                            //Agregar metodos de items
+                        }
                     }
                 }
-                
+                if (player1action == 3)
+                {
+                    //Agregar metodos de items
+                }
+                else
+                {
+                    //Agregar metodos de items
+                }
             }
-            if (Pokemon1.Status.Name == "Poison")                               //chequea al final del turno si los pokemon tienen
-            {                                                                  //veneno o quemadura y aplica el daño
-                Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.05);
-                Console.WriteLine($"{Pokemon1.Name} took poison damage!");
-            }
-            else if (Pokemon1.Status.Name == "Burn")
+            if (player1action == 1 | player2action == 1)
             {
-                Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.1);
-                Console.WriteLine($"{Pokemon1.Name} took burn damage!");
+                if (player1action == 1 & player2action == 1)
+                {
+                    if (Pokemon1.Speed > Pokemon2.Speed)
+                    {
+                        if (attackPokemon(Jugador1)) ;
+                        else
+                        {
+                            attackPokemon(Jugador2);
+                        }
+                    }
+                    if (Pokemon2.Speed > Pokemon1.Speed)
+                    {
+                        if (attackPokemon(Jugador2)) ;
+                        else
+                        {
+                            attackPokemon(Jugador1);
+                        }
+                    }
+                    else
+                    {
+                        Random random = new Random();
+                        if (random.Next(1, 2) == 1)
+                        {
+                            if (attackPokemon(Jugador1)) ;
+                            else
+                            {
+                                attackPokemon(Jugador2);
+                            }
+                        }
+                        else
+                        {
+                            if (attackPokemon(Jugador2)) ;
+                            else
+                            {
+                                attackPokemon(Jugador1);
+                            }
+                        }
+                    }
+                }
+                if (player1action == 1)
+                {
+                    attackPokemon(Jugador1);
+                }
+                else
+                {
+                    attackPokemon(Jugador2);
+                }
             }
-            if (Pokemon2.Status.Name == "Poison")                               
-            {                                                                  
-                Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.05);
-                Console.WriteLine($"{Pokemon2.Name} took poison damage!");
-            }
-            else if (Pokemon2.Status.Name == "Burn")
-            {
-                Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.1);
-                Console.WriteLine($"{Pokemon2.Name} took burn damage!");
-            }
-            
+            reduceCooldowns();
+            applyStatus();
             turno += 1;
             vivos = checkIfAlive(Jugador1) && checkIfAlive(Jugador2); //Retorna false si uno de los dos equipos tiene todos sus pokemon derrotados
         }
@@ -268,28 +336,51 @@ public class Arena
         return false;
     }
 
-    public bool accionDelJugador(Player jugador) //Retorna true si el otro jugador perdera el turno
+    public void reduceCooldowns() //Se aplica para reducir el cooldown de los ataques especiales
     {
-        IOutput output = new Consola();
-        int accion = output.getAction(jugador);
-        if (accion == 1)
-        {
-            
-            return attackPokemon(jugador);
-        }
-        if (accion == 2)
-        {
-            sendPokemonToField(jugador);
-        }
-        foreach (Pokemon pokemon in jugador.Team) 
+        foreach (Pokemon pokemon in Jugador1.Team) 
         { 
             foreach (IMove movimiento in pokemon.Moveset) 
             { 
                 movimiento.reduceCooldownTimer();
             }
         }
-        output.printPokemonStatus(Pokemon1);
-        output.printPokemonStatus(Pokemon2);
+        foreach (Pokemon pokemon in Jugador2.Team) 
+        { 
+            foreach (IMove movimiento in pokemon.Moveset) 
+            { 
+                movimiento.reduceCooldownTimer();
+            }
+        }
+    }
+
+    public void applyStatus() //Hace daño a los pokemones afectados por status de daño
+    {
+        IOutput output = new Consola();
+        if (Pokemon1.Status.Name == "Poison")
+        {                                                                  
+            Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.05);
+            output.printPoison(Pokemon1);
+        }
+        else if (Pokemon1.Status.Name == "Burn")
+        {
+            Pokemon1.Hp = Pokemon1.Hp - (int)(Pokemon1.MaxHp * 0.1);
+            output.printBurn(Pokemon1);
+        }
+        if (Pokemon2.Status.Name == "Poison")                               
+        {                                                                  
+            Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.05);
+            output.printPoison(Pokemon2);
+        }
+        else if (Pokemon2.Status.Name == "Burn")
+        {
+            Pokemon2.Hp = Pokemon2.Hp - (int)(Pokemon2.MaxHp * 0.1);
+            output.printBurn(Pokemon2);
+        }
+    }
+
+    public bool looseturn() //Retorna true si el jugador perdera el turno
+    {
         return false;
     }
 
